@@ -1,7 +1,8 @@
 import axios from "axios";
 
+// let baseURL = "http://localhost:5000";
 
-const baseURL= "https://62ad8de0402135c7acc2a93e.mockapi.io";
+let baseURL = "http://localhost:8080";
 
 
 export const momentServices = {
@@ -14,6 +15,13 @@ export const momentServices = {
 
     return moment;
     },
+
+    
+
+
+
+
+
 
 
  };

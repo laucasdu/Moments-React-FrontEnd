@@ -2,11 +2,13 @@ import React, { useEffect, useState } from 'react'
 import MomentCard from '../card/MomentCard';
 import { momentServices} from '../../services/momentServices'
 import { CtMomentList } from './MomentsList.styled'
-
+import data from "../../assets/data/dbAxios.json"
 
 function MomentsList() {
 
-  const [moment, setMoments] = useState([]);
+  const [moments, setMoments] = useState([]);
+
+  console.log(moments)
 
   useEffect(()=> {
     getAllMoments();
@@ -23,7 +25,7 @@ function MomentsList() {
     <>
       <CtMomentList>
         {
-            moment.map((moment, key)=> (
+            moments.map((moment, key)=> (
               <MomentCard key={key} moment={moment}/>
       
         ))}
