@@ -3,25 +3,25 @@ import styled from "styled-components";
 
 export const CtCard = styled.div`
   
-  border-radius: 16px;
   display: flex;
   flex-direction: column;
   margin: 5%;
   filter: drop-shadow(2px 1px 6px #7a8188 );
   position: relative;
-  border-radius : 8px;  
-  transition-duration: 0.25s;
+  background-color: white;
+  border: 1px solid red;
+  border-radius: 1rem;
 `;
 
 export const CtImage = styled.div`
-   background-color: #212F3D;
+    background-color: #212F3D;
     display: flex;
     justify-content: center;
     width: 100%;
     height: 80%;
     overflow-x: hidden;
-    border-radius: 8px 8px 0px 0px;
     overflow: hidden;
+
 `;
 
 export const Imatge = styled.img`

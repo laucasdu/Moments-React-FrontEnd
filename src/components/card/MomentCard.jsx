@@ -1,5 +1,6 @@
-import axios from 'axios';
 import React from 'react'
+import { Link } from "react-router-dom";
+
 import { 
   CtCard, 
   CtUser,
@@ -21,7 +22,7 @@ import {
 } from './MomentCard.styled';
 
 
-function MomentCard({moment}) {
+function MomentCard({moment, deleteMoment, EditMoment}) {
 
 
   return (
@@ -31,7 +32,9 @@ function MomentCard({moment}) {
           <ImgUser><i className="fa-solid fa-circle-user"></i></ImgUser>
       </CtUser>
       <CtImage>
+      <Link to = {`/moment/${moment.id}`}>
           <Imatge  src={moment.imgUrl} />
+          </Link>
       </CtImage>
       <CtCardInfo>
         <CtIcons>
@@ -39,8 +42,10 @@ function MomentCard({moment}) {
           <ButtonStar><i className="fa-solid fa-star"></i></ButtonStar>
         </CtIcons>
         <CtIconsModify>
-          <ButtonEdit><i className="fa-solid fa-pen-to-square"></i></ButtonEdit>
-          <ButtonDelete><i className="fa-solid fa-trash-can"></i></ButtonDelete>
+          <ButtonEdit onClick={() => EditMoment(moment.id)}>
+          <i className="fa-solid fa-pen-to-square"></i></ButtonEdit>
+          <ButtonDelete onClick={() => deleteMoment(moment.id)}>
+            <i className="fa-solid fa-trash-can"></i></ButtonDelete>
         </CtIconsModify>
         </CtCardInfo>
         <CtTxt>

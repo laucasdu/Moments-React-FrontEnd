@@ -16,7 +16,12 @@ export const momentServices = {
     return moment;
     },
 
-    
+    deleteMoment(id) {
+        const deletedMoment = axios.delete(baseURL + "/moment/" + id).then((res) => res.data);
+            return deletedMoment;
+    },
+
+
 
 
 
