@@ -4,7 +4,6 @@ import styled from "styled-components";
 export const CtNavbar = styled.div`
   display: flex;
   width: 100vw;
-  height: 5vw;
   background-color: #1D0B29;
 `;
 
@@ -15,7 +14,6 @@ export const CtLogo = styled.div`
   margin-right: 15%;
   font-size: 0,5em;
   display: flex;
-  align-items: center;
 `;
 
 export const TxtLogo = styled.h1`
@@ -65,7 +63,7 @@ export const BtInfo = styled.div`
   height: 100%;
   display: flex;
   justify-content: space-around;
-  align-items: center;
+  margin-top: 3%;
 `;
 
 export const BtCreate = styled.div`

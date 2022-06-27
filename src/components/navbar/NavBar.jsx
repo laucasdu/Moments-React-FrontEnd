@@ -26,7 +26,7 @@ function NavBar() {
           
           <CtSearch>
             <InputSearch type="text" placeholder="Search..." />
-            <BtSearch><i className="fa-solid fa-magnifying-glass"></i></BtSearch>
+            <BtSearch><i className="fa-solid fa-magnifying-glass"></i></BtSearch>          
           </CtSearch>
 
         <BtInfo>
@@ -36,7 +36,6 @@ function NavBar() {
               <i className="fa-solid fa-house fa-2xl"></i>
             </BtHome>
           </Link>
-
 
           <Link to="/moment">
             <BtCreate>
