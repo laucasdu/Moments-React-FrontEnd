@@ -10,7 +10,8 @@ import {
   TxtLogo, 
   BtInfo,
   BtCreate,
-  BtLogin
+  BtLogin,
+  BtHome
   } 
   from './Navbar.styled'
 
@@ -29,9 +30,17 @@ function NavBar() {
           </CtSearch>
 
         <BtInfo>
-          <Link to="/create">
+
+        <Link to="/">
+            <BtHome>
+              <i className="fa-solid fa-house fa-2xl"></i>
+            </BtHome>
+          </Link>
+
+
+          <Link to="/moment">
             <BtCreate>
-              <i className="fa-regular fa-user fa-2xl"></i>
+              <i className="fa-solid fa-plus fa-2xl"></i>
             </BtCreate>
           </Link>        
 

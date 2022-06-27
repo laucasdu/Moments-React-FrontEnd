@@ -5,21 +5,21 @@ export const CtNavbar = styled.div`
   display: flex;
   width: 100vw;
   height: 5vw;
-  background-color: red;
+  background-color: #1D0B29;
 `;
 
 export const CtLogo = styled.div`
   height: 100%;
   width: 10%;
   margin-left: 2%;
-  margin-right: 5%;
+  margin-right: 15%;
   font-size: 0,5em;
   display: flex;
   align-items: center;
 `;
 
 export const TxtLogo = styled.h1`
-   color: black;
+   color: #EAD9F6;
   &:hover,
   :active,
   :link,
@@ -32,27 +32,29 @@ export const CtSearch = styled.div`
   width: 100%;
   display: flex;
   justify-content: center;
+  margin-right: 10%;
   align-items: center;
   position: relative;
 `;
 
 export const InputSearch = styled.div`
-  width: 95%;
+  width: 100%;
   height: 6vh;
   min-width: 10rem;
   position: relative;
   border: none;
-  color: #289772;
   padding: 0 4rem 0 1.5rem;
   border-radius: 1.5rem;
   font-size: smaller;
   outline: none;
+  color:#EAD9F6;
   background-color: rgba(249, 249, 249, 0.1843137255);
   --webkit-backdrop-filter: blur( 0.7rem );
 `;
 
 export const BtSearch = styled.div`
   background: none;
+  color:#EAD9F6;
   border: none;
   position: absolute;
   right: 2%;
@@ -68,7 +70,7 @@ export const BtInfo = styled.div`
 
 export const BtCreate = styled.div`
   border: none;
-  color: black;
+  color: #EAD9F6;
   font-weight: bold;
   font-size: 0.5em;
   width: 10%;
@@ -80,7 +82,19 @@ export const BtCreate = styled.div`
 
 export const BtLogin = styled.div`
   border: none;
-  color: black;
+  color: #EAD9F6;
+  font-weight: bold;
+  font-size: 0.5em;
+  width: 10%;
+  &:active,
+  :hover {
+    color: grey;
+  }
+`;
+
+export const BtHome = styled.div`
+  border: none;
+  color: #EAD9F6;
   font-weight: bold;
   font-size: 0.5em;
   width: 10%;

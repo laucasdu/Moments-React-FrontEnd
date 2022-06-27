@@ -1,8 +1,8 @@
 import React from 'react'
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import App from '../App'
-import { BtCreate, BtLogin } from '../components/navbar/Navbar.styled'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Moment from '../pages/momentInfo/Moment'
+import LogInPage from '../pages/logInPage/LogInPage'
 
 function Router() {
 
@@ -12,9 +12,7 @@ function Router() {
         <Routes>
                 <Route path='/' element={<App />} />
                 <Route path="/moment/:id" element={<Moment />} />
-                <Route path="/" element={<BtCreate />} />
-                <Route path="/" element={<BtLogin />} />
-
+                <Route path="/log-in" element={<LogInPage />} />
         </Routes>
     </BrowserRouter>
 
