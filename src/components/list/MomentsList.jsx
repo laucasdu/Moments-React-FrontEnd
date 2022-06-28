@@ -20,7 +20,6 @@ function MomentsList() {
       });
     };
 
-  
     const deleteMoment = (id) => {
       let momentToDelete = moments.filter((moment) => moment.id === id);
       let deleteConfirmed = window.confirm(
@@ -45,7 +44,6 @@ function MomentsList() {
               key={key} 
               moment={moment}
               deleteMoment={deleteMoment}
-
 
               />
       
