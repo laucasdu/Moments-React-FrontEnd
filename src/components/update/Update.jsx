@@ -1,16 +1,16 @@
 import React from 'react'
-import NavBar from '../../components/navbar/NavBar';
+import NavBar from '../navbar/NavBar';
 import {
   CtForm,
   Input,
   CtInput,
-  BtCreate,
+  BtEdit,
   Ct,
   InputDescription,
 
-} from "./MomentForm.styled";
+} from "./Update.styled";
 
-function MomentForm() {
+function Update() {
 
     return (
 
@@ -33,9 +33,9 @@ function MomentForm() {
                     name="description"
                     placeholder="Text description..."
                   ></InputDescription>
-                    <BtCreate type="submit" className="submitBtn">
-                      <i className="fa-solid fa-circle-plus fa-2xl"></i>
-                    </BtCreate>
+                    <BtEdit type="submit" className="submitBtn">
+                      <i className="fa-solid fa-pen-to-square fa-2xl"></i>
+                    </BtEdit>
                 </CtInput>
                 </CtForm>
                 </Ct>
@@ -43,4 +43,4 @@ function MomentForm() {
         )   
     };
 
-export default MomentForm
+export default Update
