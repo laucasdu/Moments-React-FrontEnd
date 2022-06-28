@@ -100,3 +100,23 @@ export const BtEdit = styled.button`
   }
 `;
 
+
+export const BtCancel = styled.button`
+  background-color: transparent;
+  color: #1D0B29;
+  width: 5%;
+  border: none;
+  position: absolute;
+  top: 100%;
+  margin-top: -5%;
+  left: 20%;
+  &:hover {
+    color: #1D0B29;
+  }
+  @media (max-width: 450px) {
+    position: absolute;
+    top: 85%;
+    left: 45%;
+    font-size: 1.2em;
+  }
+`;

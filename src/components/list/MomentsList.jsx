@@ -21,19 +21,19 @@ function MomentsList() {
     };
 
   
-//FUNCIÓ PER ESBORRAR UNA PEL·LÍCULA
-const deleteMoment = (moment) => {    
-  let deleteConfirmed = window.confirm(`really delete ${moments.title}?`);
-  if (!deleteConfirmed) return; //clàusula salvaguarda
-
-momentServices.deleteMoment(moments.id).then((res) => {
+    const deleteMoment = (id) => {
+      let momentToDelete = moments.filter((moment) => moment.id === id);
+      let deleteConfirmed = window.confirm(
+        `Really remove ${momentToDelete[0].title} from the list?`
+      );
+      if (!deleteConfirmed) return;
+      let filterMoments = moments.filter((moment) => moment.id !== id);
+      console.log(filterMoments);
   
-  if (res.status === 200) {
-      let filterMoment = moments.filter(item => item.id !==moments.id);
-      setMoments(filterMoment);
-  } 
-})
-}
+      momentServices.deleteMoment(parseInt(id)).then((res) => {
+        if (res.id === id) setMoments(filterMoments);
+      });
+    };
 
   return (
 
@@ -45,6 +45,8 @@ momentServices.deleteMoment(moments.id).then((res) => {
               key={key} 
               moment={moment}
               deleteMoment={deleteMoment}
+
+
               />
       
         ))}

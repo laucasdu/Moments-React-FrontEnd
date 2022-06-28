@@ -11,7 +11,7 @@ export const momentServices = {
 
 
     getAllMoments() {
-        const moment = axios.get(baseURL).then((res) => {
+        const moment = axios.get(baseURL + "/moments").then((res) => {
         return res.data;
     });
 
@@ -32,8 +32,19 @@ export const momentServices = {
           return moments;
         },
 
+        deleteMoment(id) {
+          const deletedMoment = axios
+          .delete(baseURL + "/moments/" + id)
+          .then((res) => res.data);
+              return deletedMoment;
+      },
 
-
+      addMovie(data) {
+        const addNewMoment = axios
+        .post(baseURL + "/moments/", data)
+        .then((res) => res.data);
+            return addNewMoment;
+        },
 
 
  };

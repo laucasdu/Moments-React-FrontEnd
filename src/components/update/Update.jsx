@@ -6,6 +6,7 @@ import {
   CtInput,
   BtEdit,
   Ct,
+  BtCancel,
   InputDescription,
 
 } from "./Update.styled";
@@ -33,9 +34,12 @@ function Update() {
                     name="description"
                     placeholder="Text description..."
                   ></InputDescription>
-                    <BtEdit type="submit" className="submitBtn">
+                    <BtEdit type="submit" className="BtEdit">
                       <i className="fa-solid fa-pen-to-square fa-2xl"></i>
                     </BtEdit>
+                    <BtCancel type="submit" className="BtCancel">
+                      <i className="fa-solid fa-circle-plus fa-2xl"></i>
+                    </BtCancel>
                 </CtInput>
                 </CtForm>
                 </Ct>

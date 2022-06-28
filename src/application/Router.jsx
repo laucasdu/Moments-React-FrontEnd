@@ -15,8 +15,8 @@ function Router() {
                 <Route path='/' element={<App />} />
                 <Route path="/moment/:id" element={<Moment />} />
                 <Route path="/log-in" element={<LogInPage />} />
-                {/* <Route path="/create" element={<MomentCreate />} /> */}
-                <Route path="/create" element={<Update />} />
+                <Route path="/create" element={<MomentCreate />} />
+                <Route path="/update" element={<Update />} />
 
 
         </Routes>

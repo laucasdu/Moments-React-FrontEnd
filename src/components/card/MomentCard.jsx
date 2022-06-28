@@ -20,7 +20,7 @@ import {
 } from './MomentCard.styled';
 
 
-function MomentCard({moment, deleteMoment, EditMoment}) {
+function MomentCard({moment, deleteMoment, editMoment}) {
 
 
   return (
@@ -44,10 +44,10 @@ function MomentCard({moment, deleteMoment, EditMoment}) {
           <ButtonStar><i className="fa-solid fa-star"></i></ButtonStar>
         </CtIcons>
         <CtIconsModify>
-          <ButtonEdit onClick={() => EditMoment(moment.id)}>
-          <i className="fa-solid fa-pen-to-square"></i></ButtonEdit>
+          <ButtonEdit onClick={() => editMoment(moment.id)}>
+          <a href="/update"><i className="fa-solid fa-pen-to-square"></i></a></ButtonEdit>
           <ButtonDelete onClick={() => deleteMoment(moment.id)}>
-            <i className="fa-solid fa-trash-can"></i></ButtonDelete>
+          <i className="fa-solid fa-trash-can"></i></ButtonDelete>
         </CtIconsModify>
         </CtCardInfo>
         <CtTxt>
