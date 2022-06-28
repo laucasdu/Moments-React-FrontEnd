@@ -18,7 +18,6 @@ export const CtMoment = styled.div`
   border-radius: 1vw;
   padding: 2%;
   width: 75%;
-  box-shadow: 0 0 15px grey;
 
   @media (max-width: 450px) {
     flex-direction: column;

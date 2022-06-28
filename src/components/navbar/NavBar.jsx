@@ -37,7 +37,7 @@ function NavBar() {
             </BtHome>
           </Link>
 
-          <Link to="/moment">
+          <Link to="/create">
             <BtCreate>
               <i className="fa-solid fa-circle-plus fa-2xl"></i>
             </BtCreate>

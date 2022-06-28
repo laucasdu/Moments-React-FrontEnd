@@ -25,5 +25,16 @@ export const momentServices = {
         return moments;
       },
 
+      updateMoment(id, newMoment) {
+          const moments = axios
+            .put(baseURL + "/moments/" + id, newMoment)
+            .then((res) => res.data);
+          return moments;
+        },
+
+
+
+
+
  };
    
