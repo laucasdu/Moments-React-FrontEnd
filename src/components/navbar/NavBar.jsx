@@ -39,13 +39,13 @@ function NavBar() {
 
           <Link to="/moment">
             <BtCreate>
-              <i className="fa-solid fa-plus fa-2xl"></i>
+              <i className="fa-solid fa-circle-plus fa-2xl"></i>
             </BtCreate>
           </Link>        
 
           <Link to="/log-in">
             <BtLogin>
-              <i className="fa-regular fa-user fa-2xl"></i>
+              <i className="fa-solid fa-user fa-2xl"></i>
             </BtLogin>
           </Link>
           </BtInfo>

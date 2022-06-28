@@ -70,7 +70,7 @@ export const BtCreate = styled.div`
   border: none;
   color: #EAD9F6;
   font-weight: bold;
-  font-size: 0.5em;
+  font-size: 0.7em;
   width: 10%;
   &:active,
   :hover {
@@ -82,7 +82,7 @@ export const BtLogin = styled.div`
   border: none;
   color: #EAD9F6;
   font-weight: bold;
-  font-size: 0.5em;
+  font-size: 0.7em;
   width: 10%;
   &:active,
   :hover {
@@ -94,7 +94,7 @@ export const BtHome = styled.div`
   border: none;
   color: #EAD9F6;
   font-weight: bold;
-  font-size: 0.5em;
+  font-size: 0.7em;
   width: 10%;
   &:active,
   :hover {

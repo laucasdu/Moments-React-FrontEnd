@@ -16,9 +16,7 @@ import {
   ButtonFav, 
   TxtDescription,
   TxtTitle,
-  CtTxt
-
-
+  CtTxt,
 } from './MomentCard.styled';
 
 
@@ -29,7 +27,11 @@ function MomentCard({moment, deleteMoment, EditMoment}) {
 
     <CtCard>
       <CtUser>
-          <ImgUser><i className="fa-solid fa-circle-user"></i></ImgUser>
+          <ImgUser><i className="fa-solid fa-circle-user"></i>
+          <hr>
+          </hr>
+          laura
+          </ImgUser>
       </CtUser>
       <CtImage>
       <Link to = {`/moment/${moment.id}`}>
