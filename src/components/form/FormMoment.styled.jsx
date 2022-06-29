@@ -10,6 +10,9 @@ export const CtForm = styled.form`
   width: 60%;
   height: 50%;
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   border-style: solid;
   border-color: #1D0B29;
   padding: 3%;
@@ -23,26 +26,27 @@ export const CtForm = styled.form`
   }
 `;
 
-export const CtInput = styled.div`
-  width: 100%;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-left: 2.3%;
-  display: flex;
+// export const CtInput = styled.form`
+//   width: 100%;
+//   flex-direction: column;
+//   justify-content: center;
+//   align-items: center;
+//   margin-left: 2.3%;
+//   display: flex;
 
-  @media (max-width: 450px) {
-    width: 100%;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-left: 8%;
-    display: flex;
-  }
-`;
+
+//   @media (max-width: 450px) {
+//     width: 100%;
+//     flex-direction: column;
+//     align-items: center;
+//     justify-content: center;
+//     margin-left: 8%;
+//     display: flex;
+//   }
+// `;
 
 export const Input = styled.input`
-  background-color: #1D0B29;
+  background-color: #B4CFB0;
   padding: 3%;
   border-radius: 0.8vw;
   border-style: solid;
@@ -61,15 +65,14 @@ export const Input = styled.input`
 `;
 
 export const InputDescription = styled.textarea`
-  background-color: #1D0B29;
-  background-color: #1D0B29;
+  background-color: #B4CFB0;
   padding: 3%;
   border-radius: 0.8vw;
   border-style: solid;
   border-color: white;
   font-size: 0.9em;
   width: 93%;
-  color: black;
+  color: #789395;
   margin-bottom: 2%;
 
   @media (max-width: 450px) {

@@ -3,8 +3,6 @@ import { Link } from "react-router-dom";
 
 import { 
   CtCard, 
-  CtUser,
-  ImgUser,
   CtImage,
   CtCardInfo,
   CtIcons, 
@@ -26,16 +24,9 @@ function MomentCard({moment, deleteMoment, editMoment}) {
   return (
 
     <CtCard>
-      <CtUser>
-          <ImgUser><i className="fa-solid fa-circle-user"></i>
-          <hr>
-          </hr>
-          laura
-          </ImgUser>
-      </CtUser>
       <CtImage>
       <Link to = {`/moment/${moment.id}`}>
-          <Imatge src={moment.imgUrl} />
+          <Imatge src={moment.imgUrl}/>
           </Link>
       </CtImage>
       <CtCardInfo>
