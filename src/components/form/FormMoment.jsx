@@ -3,7 +3,6 @@ import { momentServices } from '../../services/momentServices'
 import {
   CtForm,
   Input,
-  CtInput,
   BtEdit,
   Ct,
   BtCancel,
@@ -66,6 +65,7 @@ function FormMoment() {
                       <i className="fa-solid fa-circle-plus fa-2xl"></i>
                     </BtCancel>
                 </CtForm>
+                
                 </Ct>
             </>
           )

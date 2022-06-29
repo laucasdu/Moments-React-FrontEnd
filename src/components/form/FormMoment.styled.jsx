@@ -26,24 +26,7 @@ export const CtForm = styled.form`
   }
 `;
 
-// export const CtInput = styled.form`
-//   width: 100%;
-//   flex-direction: column;
-//   justify-content: center;
-//   align-items: center;
-//   margin-left: 2.3%;
-//   display: flex;
 
-
-//   @media (max-width: 450px) {
-//     width: 100%;
-//     flex-direction: column;
-//     align-items: center;
-//     justify-content: center;
-//     margin-left: 8%;
-//     display: flex;
-//   }
-// `;
 
 export const Input = styled.input`
   background-color: #B4CFB0;
