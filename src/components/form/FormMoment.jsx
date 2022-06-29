@@ -1,5 +1,4 @@
-import React from 'react'
-import NavBar from '../navbar/NavBar';
+import React, { useState } from 'react'
 import {
   CtForm,
   Input,
@@ -9,16 +8,18 @@ import {
   BtCancel,
   InputDescription,
 
-} from "./Update.styled";
+} from "./FormMoment.styled";
 
-function Update() {
+function FormMoment() {
 
-    return (
+
+    
+
+  return (
 
         <>
-        <NavBar/>
             <Ct>
-              <CtForm>
+            <CtForm>
                 <CtInput>
                   <Input
                     name="imgUrl"
@@ -44,7 +45,8 @@ function Update() {
                 </CtForm>
                 </Ct>
             </>
-        )   
+          )
     };
+  
 
-export default Update
+export default FormMoment

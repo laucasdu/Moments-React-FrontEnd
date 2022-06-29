@@ -1,6 +1,6 @@
 import axios from "axios";
 
-// let baseURL = "http://localhost:5000/moments";
+// let baseURL = "http://localhost:5000";
 
 let baseURL = "http://localhost:8080";
 
@@ -39,12 +39,19 @@ export const momentServices = {
               return deletedMoment;
       },
 
-      addMovie(data) {
-        const addNewMoment = axios
-        .post(baseURL + "/moments/", data)
-        .then((res) => res.data);
-            return addNewMoment;
-        },
+      // createMoment(data) {
+      //   const createNewMoment = axios
+      //   .post(baseURL + "/moments/", data)
+      //   .then((res) => res.data);
+      //       return createNewMoment;
+      //   },
+
+      createMoment(data) {
+          const createNewMoment = axios
+          .post(baseURL + "/moments/", data)
+              return createNewMoment;
+          },
+  
 
 
  };

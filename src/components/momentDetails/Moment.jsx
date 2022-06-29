@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom';
 import { momentServices } from '../../services/momentServices'
-import NavBar from '../../components/navbar/NavBar'
 import {
   Container,
   Image,
@@ -23,7 +22,7 @@ function Moment() {
     () => {
       getMomentById(id);
     },
-    []
+    [id]
   );
 
   const getMomentById = (id) => {
@@ -35,7 +34,6 @@ function Moment() {
 
     return (
       <>
-      <NavBar/>
         <Container>
           <CtMoment>
           <CtImage>

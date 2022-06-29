@@ -35,14 +35,14 @@ export const CtSearch = styled.div`
   position: relative;
 `;
 
-export const InputSearch = styled.div`
+export const Input = styled.div`
   width: 100%;
   height: 6vh;
   min-width: 10rem;
   position: relative;
   border: none;
   padding: 0 4rem 0 1.5rem;
-  border-radius: 1.5rem;
+  border-radius: 0.5vw;
   font-size: smaller;
   outline: none;
   color:#EAD9F6;

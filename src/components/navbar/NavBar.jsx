@@ -1,10 +1,9 @@
 import React from 'react'
 import { Link } from "react-router-dom";
-
 import { 
   CtNavbar, 
   CtSearch, 
-  InputSearch, 
+  Input, 
   BtSearch, 
   CtLogo,
   TxtLogo, 
@@ -25,7 +24,7 @@ function NavBar() {
           </CtLogo>
           
           <CtSearch>
-            <InputSearch type="text" placeholder="Search..." />
+            <Input type="text" placeholder="Search..." />
             <BtSearch><i className="fa-solid fa-magnifying-glass"></i></BtSearch>          
           </CtSearch>
 
@@ -37,13 +36,13 @@ function NavBar() {
             </BtHome>
           </Link>
 
-          <Link to="/create">
+          <Link to="/form">
             <BtCreate>
               <i className="fa-solid fa-circle-plus fa-2xl"></i>
             </BtCreate>
           </Link>        
 
-          <Link to="/log-in">
+          <Link to="/logIn">
             <BtLogin>
               <i className="fa-solid fa-user fa-2xl"></i>
             </BtLogin>

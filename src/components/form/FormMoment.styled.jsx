@@ -6,7 +6,7 @@ export const Ct = styled.div`
   align-items: center; 
 `;
 
-export const CtForm = styled.div`
+export const CtForm = styled.form`
   width: 60%;
   height: 50%;
   display: flex;
@@ -80,7 +80,7 @@ export const InputDescription = styled.textarea`
   }
 `;
 
-export const BtCreate = styled.button`
+export const BtEdit = styled.button`
   background-color: transparent;
   color: #1D0B29;
   width: 5%;
@@ -100,3 +100,23 @@ export const BtCreate = styled.button`
   }
 `;
 
+
+export const BtCancel = styled.button`
+  background-color: transparent;
+  color: #1D0B29;
+  width: 5%;
+  border: none;
+  position: absolute;
+  top: 100%;
+  margin-top: -5%;
+  left: 20%;
+  &:hover {
+    color: #1D0B29;
+  }
+  @media (max-width: 450px) {
+    position: absolute;
+    top: 85%;
+    left: 45%;
+    font-size: 1.2em;
+  }
+`;

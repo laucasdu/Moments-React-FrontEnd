@@ -7,7 +7,7 @@ import { CtMomentList } from './MomentsList.styled'
 function MomentsList() {
 
   const [moments, setMoments] = useState([]);
-
+  const [editedMoment, setEditedMoment] = useState();
   console.log(moments)
 
   useEffect(()=> {
@@ -34,6 +34,15 @@ function MomentsList() {
       });
     };
 
+   const editMoment = (id) => {
+     let editedMoment = moments.find(moment => moment.id == id );
+     setEditedMoment(editedMoment)
+     
+     
+   }
+
+
+
   return (
 
     <>
@@ -44,7 +53,7 @@ function MomentsList() {
               key={key} 
               moment={moment}
               deleteMoment={deleteMoment}
-
+              editMoment={editMoment}
               />
       
         ))}

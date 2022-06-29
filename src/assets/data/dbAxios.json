@@ -2,27 +2,11 @@
     [
     {
         "id": "1",
-        "imgUser": "María",
         "title": "Noruega",
-        "imgUrl": "https://www.tierrasinsolitas.com/wp-content/uploads/2019/05/lago-di-braies-dolomitas-italia.jpg"
-    },
-    {
-        "id": "2",
-        "imgUser": "María",
-        "title": "Japó",
-        "imgUrl": "https://guiasdeviajeanaya.es/imagenes/images/noticias/5-rutas-autocaravana-agosto-2020/cabecera.jpg"
-    },
-    {
-        "id": "3",
-        "imgUser": "María",
-        "title": "Islandia",
-        "imgUrl": "https://guiasdeviajeanaya.es/imagenes/images/noticias/5-rutas-autocaravana-agosto-2020/cabecera.jpg"
-    },
-    {
-        "id": "4",
-        "imgUser": "María",
-        "title": "Dolomitas",
-        "imgUrl": "https://www.muntania.com/wp-content/uploads/2021/04/20190122091832-senderismo-en-el-parque-nacional-de-la-selva-negra-alemania.jpg"
+        "imgUrl": "https://www.tierrasinsolitas.com/wp-content/uploads/2019/05/lago-di-braies-dolomitas-italia.jpg",
+        "description": "Lorem ipsum"
+
     }
+
     ] 
 }

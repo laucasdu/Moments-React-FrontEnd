@@ -2,9 +2,8 @@ import React from 'react'
 import App from '../App'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import LogInPage from '../pages/logInPage/LogInPage'
-import Moment from '../pages/InfoMoment/Moment'
-import MomentCreate from '../pages/create/MomentCreate'
-import Update from '../components/update/Update'
+import Details from '../pages/details/Details'
+import FormPage from '../pages/formPage/FormPage'
 
 function Router() {
 
@@ -13,10 +12,10 @@ function Router() {
     <BrowserRouter>
         <Routes>
                 <Route path='/' element={<App />} />
-                <Route path="/moment/:id" element={<Moment />} />
-                <Route path="/log-in" element={<LogInPage />} />
-                <Route path="/create" element={<MomentCreate />} />
-                <Route path="/update" element={<Update />} />
+                <Route path="/moment/:id" element={<Details />} />
+                <Route path="/logIn" element={<LogInPage />} />
+                <Route path="/form" element={<FormPage />} />
+
 
 
         </Routes>
