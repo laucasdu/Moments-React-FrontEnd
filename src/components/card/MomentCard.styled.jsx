@@ -8,7 +8,6 @@ export const CtCard = styled.div`
   position: relative;
   background-color: white;
   margin-top: 20%;
-  border-top: 3px solid #1D0B29;
   transition: 0.4s;
   
   &:hover {
@@ -17,12 +16,13 @@ export const CtCard = styled.div`
   }
 `;
 
+
 export const CtImage = styled.div`
+    border-top: 5px solid #072104;
     display: flex;
     justify-content: center;
     width: 100%;
     height: 80%;
-    overflow-x: hidden;
     overflow: hidden;
 `;
 
@@ -43,9 +43,9 @@ export const CtIcons = styled.div`
   justify-content: flex-start;  
 `;
 
-export const ButtonFav = styled.button`
-  color: red;
+export const BtFav = styled.button`
   background-color: transparent;
+  margin-left: 6%;
   border: none;
   margin-right: 2%;
   cursor: pointer;
@@ -54,7 +54,7 @@ export const ButtonFav = styled.button`
   }
    
 `
-export const ButtonStar = styled.button`
+export const BtComment = styled.button`
   color: black;
   background-color: transparent;
   border: none;
@@ -71,22 +71,22 @@ export const CtIconsModify = styled.div`
   justify-content: flex-end;
    
 `
-export const ButtonEdit = styled.button`
+export const BtEdit = styled.button`
   color: black;
   background-color: transparent;
   border: none;
-  margin-right: 2%;
+  margin-right: 5%;
   cursor: pointer;
   &:hover {
     color: grey;
   }
  
 `
-export const ButtonDelete = styled.button`
+export const BtDelete = styled.button`
   color: black;
   background-color: transparent;
   border: none;
-  margin-right: 2%;
+  margin-right: 6%;
   cursor: pointer;
   &:hover {
     color: grey;

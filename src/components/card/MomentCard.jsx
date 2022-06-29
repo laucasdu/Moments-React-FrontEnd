@@ -7,11 +7,11 @@ import {
   CtCardInfo,
   CtIcons, 
   CtIconsModify, 
-  ButtonEdit, 
-  ButtonDelete, 
-  ButtonStar,
+  BtDelete, 
+  BtEdit,
+  BtComment,
   Imatge,
-  ButtonFav, 
+  BtFav, 
   TxtDescription,
   TxtTitle,
   CtTxt,
@@ -31,17 +31,17 @@ function MomentCard({moment, deleteMoment, editMoment}) {
       </CtImage>
       <CtCardInfo>
         <CtIcons>
-          <ButtonFav><i className="fa-solid fa-heart"></i></ButtonFav>
-          <ButtonStar><i className="fa-solid fa-star"></i></ButtonStar>
+          <BtFav><i className="fa-regular fa-thumbs-up fa-2x fa-lg"></i></BtFav>
+          <BtComment><i className="fa-regular fa-comment-dots fa-2x fa-lg"></i></BtComment>
         </CtIcons>
         <CtIconsModify>
           {/* <ButtonEdit onClick={() => editMoment(moment.id)}>
             <Link to="/form">
          <i className="fa-solid fa-pen-to-square"></i></Link></ButtonEdit> */}
-           <Link to="/form">
-         <i className="fa-solid fa-pen-to-square"></i></Link>
-          <ButtonDelete onClick={() => deleteMoment(moment.id)}>
-          <i className="fa-solid fa-trash-can"></i></ButtonDelete>
+          <BtEdit> <Link to="/form">
+         <i className="fa-solid fa-pen-to-square"></i></Link></BtEdit>
+          <BtDelete onClick={() => deleteMoment(moment.id)}>
+          <i className="fa-solid fa-trash-can"></i></BtDelete>
         </CtIconsModify>
         </CtCardInfo>
         <CtTxt>

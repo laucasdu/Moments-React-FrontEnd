@@ -1,18 +1,22 @@
 import React, { useState } from 'react'
+import { useNavigate } from 'react-router-dom';
 import { momentServices } from '../../services/momentServices'
 import {
-  CtForm,
+  Form,
   Input,
   BtEdit,
-  Ct,
+  CtForm,
   BtCancel,
   InputDescription,
+  CtBtForm,
 
 } from "./FormMoment.styled";
 
 function FormMoment() {
 
     const [newMoment, setNewMoment] = useState({});
+
+    let navigate = useNavigate();
 
 
     const onInputChange = (e) => {
@@ -22,51 +26,50 @@ function FormMoment() {
     const handleSubmit = (e) => {
       e.preventDefault();
       createMoment(newMoment);
+      navigate('/', {replace: true});
     };
 
     const createMoment = (data) => {
       momentServices.createMoment(data).then((res) => {
-        window.location.href = "/";
-        console.log(res)
       });
     }
 
-    
+    const handleReset = () => {
+      navigate('/', {replace: true});
+    }
+
 
   return (
 
         <>
-            <Ct>
-            <CtForm onSubmit={handleSubmit}>
+            <CtForm>
+            <Form onSubmit={handleSubmit}>
                   <Input
-                   name="title"
-                   type="text"
-                   placeholder="Title..."
-                   onChange={onInputChange}
-                   value={newMoment.title}
+                    onChange={onInputChange}
+                    value={newMoment.title}
+                    name="title"
+                    type="text"
+                    placeholder="Title..."
                   ></Input>
                   <Input
+                    onChange={onInputChange}
+                    value={newMoment.imgUrl}
                     name="imgUrl"
                     type="url"
                     placeholder="Paste Img url here..."
-                    onChange={onInputChange}
-                    value={newMoment.imgUrl}
                   ></Input>
                   <InputDescription
-                    name="description"
-                    placeholder="Text description..."
                     onChange={onInputChange}
                     value={newMoment.description}
+                    name="description"
+                    placeholder="Text description..."
                   ></InputDescription>
-                    <BtEdit type="submit" className="BtEdit">
-                      <i className="fa-solid fa-pen-to-square fa-2xl"></i>
-                    </BtEdit>
-                    <BtCancel type="submit" className="BtCancel">
-                      <i className="fa-solid fa-circle-plus fa-2xl"></i>
-                    </BtCancel>
+                  <CtBtForm>
+                    <BtEdit type="submit">Submit</BtEdit>
+                    <BtCancel type="reset" onClick={handleReset}>Cancel</BtCancel>
+                  </CtBtForm>
+                </Form>
                 </CtForm>
-                
-                </Ct>
             </>
           )
     };

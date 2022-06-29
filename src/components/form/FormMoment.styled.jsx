@@ -1,12 +1,12 @@
 import styled from "styled-components";
 
-export const Ct = styled.div`
+export const CtForm = styled.div`
   display: flex;
   justify-content: center;
   align-items: center; 
 `;
 
-export const CtForm = styled.form`
+export const Form = styled.form`
   width: 60%;
   height: 50%;
   display: flex;
@@ -25,8 +25,6 @@ export const CtForm = styled.form`
     height: 300px;
   }
 `;
-
-
 
 export const Input = styled.input`
   background-color: #B4CFB0;
@@ -69,12 +67,10 @@ export const InputDescription = styled.textarea`
 export const BtEdit = styled.button`
   background-color: transparent;
   color: #1D0B29;
-  width: 5%;
-  border: none;
-  border-radius: 50%;
-  position: absolute;
-  top: 100%;
-  margin-top: -5%;
+  width: 100px;
+  height: 40px;
+  border-radius: 0.8vw;
+  font-size: 1rem;
   &:hover {
     color: #1D0B29;
   }
@@ -86,16 +82,31 @@ export const BtEdit = styled.button`
   }
 `;
 
-
 export const BtCancel = styled.button`
   background-color: transparent;
   color: #1D0B29;
-  width: 5%;
-  border: none;
-  position: absolute;
-  top: 100%;
-  margin-top: -5%;
-  left: 20%;
+  width: 100px;
+  height: 40px;
+  border-radius: 0.8vw;
+  font-size: 1rem;
+  &:hover {
+    color: #1D0B29;
+  }
+  @media (max-width: 450px) {
+    position: absolute;
+    top: 85%;
+    left: 45%;
+    font-size: 1.2em;
+  }
+`;
+
+export const CtBtForm = styled.div`
+  background-color: transparent;
+  color: #1D0B29;
+  width: 100px;
+  height: 40px;
+  border-radius: 0.8vw;
+  font-size: 1rem;
   &:hover {
     color: #1D0B29;
   }
