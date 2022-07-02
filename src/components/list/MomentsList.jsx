@@ -4,11 +4,10 @@ import { momentServices} from '../../services/momentServices'
 import { CtMomentList } from './MomentsList.styled'
 //import data from "../../assets/data/dbAxios.json"
 
-function MomentsList() {
+function MomentsList({editMoment}) {
 
   const [moments, setMoments] = useState([]);
-  const [editedMoment, setEditedMoment] = useState();
-  console.log(moments)
+  // console.log(moments)
 
   useEffect(()=> {
     getAllMoments();
@@ -33,14 +32,6 @@ function MomentsList() {
         if (res.id === id) setMoments(filterMoments);
       });
     };
-
-   const editMoment = (id) => {
-     let editedMoment = moments.find(moment => moment.id == id );
-     setEditedMoment(editedMoment)
-     
-     
-   }
-
 
 
   return (

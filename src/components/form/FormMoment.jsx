@@ -8,16 +8,18 @@ import {
   CtForm,
   BtCancel,
   InputDescription,
-  CtBtForm,
+  CtButton,
+  CtTxt,
+  CtTitlePrincipal,
+  TxtPrincipal
 
 } from "./FormMoment.styled";
 
 function FormMoment() {
 
-    const [newMoment, setNewMoment] = useState({});
+  const [newMoment, setNewMoment] = useState({});
 
     let navigate = useNavigate();
-
 
     const onInputChange = (e) => {
       setNewMoment({ ...newMoment, [e.target.name]: e.target.value });
@@ -25,18 +27,19 @@ function FormMoment() {
 
     const handleSubmit = (e) => {
       e.preventDefault();
-      createMoment(newMoment);
-      navigate('/', {replace: true});
+        createMoment(newMoment)
+          navigate('/', {replace: true});
     };
+
+    const handleReset = () => {
+      navigate('/', {replace: true});
+    }
 
     const createMoment = (data) => {
       momentServices.createMoment(data).then((res) => {
       });
     }
 
-    const handleReset = () => {
-      navigate('/', {replace: true});
-    }
 
 
   return (
@@ -44,6 +47,10 @@ function FormMoment() {
         <>
             <CtForm>
             <Form onSubmit={handleSubmit}>
+              <CtTitlePrincipal> 
+            <TxtPrincipal>CREATE OF NEW MOMENT</TxtPrincipal>
+            </CtTitlePrincipal>
+              <CtTxt>Title</CtTxt>
                   <Input
                     onChange={onInputChange}
                     value={newMoment.title}
@@ -51,6 +58,7 @@ function FormMoment() {
                     type="text"
                     placeholder="Title..."
                   ></Input>
+                <CtTxt>Imatge</CtTxt>
                   <Input
                     onChange={onInputChange}
                     value={newMoment.imgUrl}
@@ -58,21 +66,23 @@ function FormMoment() {
                     type="url"
                     placeholder="Paste Img url here..."
                   ></Input>
+                <CtTxt>Description</CtTxt>
                   <InputDescription
                     onChange={onInputChange}
                     value={newMoment.description}
                     name="description"
                     placeholder="Text description..."
                   ></InputDescription>
-                  <CtBtForm>
-                    <BtEdit type="submit">Submit</BtEdit>
-                    <BtCancel type="reset" onClick={handleReset}>Cancel</BtCancel>
-                  </CtBtForm>
+                  <CtButton>
+                    <BtEdit type="submit">SUBMIT</BtEdit>
+                    <BtCancel type="reset" onClick={handleReset}>CANCEL</BtCancel>
+                  </CtButton>
                 </Form>
                 </CtForm>
             </>
           )
-    };
+    }
+  
   
 
 export default FormMoment

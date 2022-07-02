@@ -4,21 +4,20 @@ export const CtForm = styled.div`
   display: flex;
   justify-content: center;
   align-items: center; 
+  flex-direction: row;
 `;
 
 export const Form = styled.form`
-  width: 60%;
-  height: 50%;
-  display: flex;
+  width: 55%;
+  height: 61%;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  border-style: solid;
-  border-color: #1D0B29;
+  /* border-style: solid; */
+  filter: drop-shadow(2px 1px 6px #7a8188 );
+  /* border-color: #1D0B29; */
   padding: 3%;
-  border-radius: 1vw;
+  border-radius: 0.2vw;
   position: fixed;
-  top: 30%;
+  top: 20%;
   background-color: white;
 
   @media (max-width: 450px) {
@@ -27,15 +26,12 @@ export const Form = styled.form`
 `;
 
 export const Input = styled.input`
-  background-color: #B4CFB0;
-  padding: 3%;
-  border-radius: 0.8vw;
-  border-style: solid;
-  border-color: white;
-  font-size: 0.9em;
-  width: 93%;
-  color: black;
-  margin-bottom: 2%;
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 500;
 
   @media (max-width: 450px) {
     padding: 5%;
@@ -46,15 +42,16 @@ export const Input = styled.input`
 `;
 
 export const InputDescription = styled.textarea`
-  background-color: #B4CFB0;
-  padding: 3%;
-  border-radius: 0.8vw;
-  border-style: solid;
-  border-color: white;
-  font-size: 0.9em;
-  width: 93%;
-  color: #789395;
-  margin-bottom: 2%;
+  resize: none;
+  border-radius: 0.2vw;
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  font-weight: 500;
+  box-sizing: border-box;
+  font-family: 'Courier New', Courier, monospace;
+
+
 
   @media (max-width: 450px) {
     padding: 5%;
@@ -65,12 +62,21 @@ export const InputDescription = styled.textarea`
 `;
 
 export const BtEdit = styled.button`
-  background-color: transparent;
-  color: #1D0B29;
-  width: 100px;
+  color:black;
+  width: 50%;
   height: 40px;
-  border-radius: 0.8vw;
-  font-size: 1rem;
+  font-size: small;
+  align-items: center;
+  margin-top: 50px;
+  margin-right: 10px;
+  background-color: #98B5A4;
+  border: none;
+  font-weight: 800;
+  color:#072104;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  border-radius: 0.2vw;
+
+
   &:hover {
     color: #1D0B29;
   }
@@ -83,12 +89,22 @@ export const BtEdit = styled.button`
 `;
 
 export const BtCancel = styled.button`
-  background-color: transparent;
-  color: #1D0B29;
-  width: 100px;
+  color:black;
+  width: 50%;
   height: 40px;
-  border-radius: 0.8vw;
-  font-size: 1rem;
+  font-size: small;
+  background-color: none;
+  align-items: center;
+  margin-top: 50px;
+  background-color: #98B5A4;
+  border: none;
+  font-weight: 800;
+  color:#072104;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  border-radius: 0.2vw;
+
+
+
   &:hover {
     color: #1D0B29;
   }
@@ -100,16 +116,21 @@ export const BtCancel = styled.button`
   }
 `;
 
-export const CtBtForm = styled.div`
-  background-color: transparent;
-  color: #1D0B29;
-  width: 100px;
-  height: 40px;
-  border-radius: 0.8vw;
-  font-size: 1rem;
+
+export const CtButton = styled.div`
+ display: flex;
+ flex-direction: row;
+ width: 100%;
+ color:#072104;
+
+
+
+ 
+
   &:hover {
     color: #1D0B29;
   }
+
   @media (max-width: 450px) {
     position: absolute;
     top: 85%;
@@ -117,3 +138,30 @@ export const CtBtForm = styled.div`
     font-size: 1.2em;
   }
 `;
+
+export const CtTxt = styled.h1`
+  color:black;
+  font-size: small;
+  background-color: none;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding-top: 2%;
+`;
+
+export const CtTitlePrincipal = styled.div`
+  display: flex;
+  background-color: #98B5A4;
+  border-radius: 0.2vw;
+
+`;
+
+export const TxtPrincipal = styled.h1`
+  color:#072104;
+  padding-left: 30%;
+  font-size: 30px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+`;
+
+

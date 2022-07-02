@@ -39,19 +39,12 @@ export const momentServices = {
               return deletedMoment;
       },
 
-      // createMoment(data) {
-      //   const createNewMoment = axios
-      //   .post(baseURL + "/moments/", data)
-      //   .then((res) => res.data);
-      //       return createNewMoment;
-      //   },
-
       createMoment(data) {
           const createNewMoment = axios
           .post(baseURL + "/moments/", data)
+          .then((res) => res.data);
               return createNewMoment;
           },
-  
 
 
  };

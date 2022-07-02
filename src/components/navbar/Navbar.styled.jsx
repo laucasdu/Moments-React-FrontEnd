@@ -1,21 +1,22 @@
 import styled from "styled-components";
 
-
+//Navbar
 export const CtNavbar = styled.div`
   display: flex;
+  justify-content: space-around;
   width: 100vw;
+  height: 5vw;
   background-color: #072104;
-  /* background-color: #1D0B29; */
+
 
 `;
 
 export const CtLogo = styled.div`
   height: 100%;
   width: 10%;
-  margin-left: 2%;
-  margin-right: 15%;
   font-size: 0,5em;
-  display: flex;
+  align-items: center;
+  justify-content: center;
 `;
 
 export const TxtLogo = styled.h1`
@@ -28,12 +29,7 @@ export const TxtLogo = styled.h1`
   }
 `;
 
-
-export const TxtHome = styled.h1`
-  color: white;
-`;
-
-
+//Search
 export const CtSearch = styled.div`
   width: 50%;
   display: flex;
@@ -42,96 +38,94 @@ export const CtSearch = styled.div`
   position: relative;
 `;
 
-export const Input = styled.div`
+export const Input = styled.input`
   width: 100%;
   height: 6vh;
   min-width: 10rem;
   position: relative;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 600;
   border: none;
   padding: 0 4rem 0 1.5rem;
-  border-radius: 0.5vw;
-  font-size: smaller;
+  border-radius: 0.2vw;
+  font-size: 14px;
   outline: none;
-  color:#EAD9F6;
   background-color: rgba(249, 249, 249, 0.1843137255);
   --webkit-backdrop-filter: blur( 0.7rem );
 `;
 
-export const BtSearch = styled.div`
+export const BtSearch = styled.button`
   background: none;
-  color:#EAD9F6;
+  color:#98B5A4;
   border: none;
   position: absolute;
   right: 2%;
 `;
 
-
-export const TxtBtHome = styled.div`
-  background: none;
-  border: none;
-  font-family: 'Courier New', Courier, monospace;
-  margin-left: 0.5rem;
-  padding: 0.5rem, 1.3rem;
-  border-radius: 1.5rem;
-  color: white;
-  font-size: 16px;
-  font-weight: 800;
-  white-space: nowrap;
-`;
-
-
+//Menú
 export const CtInfo = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  margin-left: 5%;
-  
+    display: flex;
+    flex-direction: row;
+    font-size: 25px;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 25px;
+    text-decoration: none;
+    margin-top: 5px;
+
 `;
 
-
-export const BtCreate = styled.div`
-  align-items: center;
+export const TxtHome = styled.li`
+  list-style-type: none;
   border: none;
-  color: #EAD9F6;
-  font-weight: bold;
-  justify-content: space-around;
+  color: white;
+  padding: 15px 32px;
+  border-radius: 0.2vw;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin-right: 25px;
+  font-size: 16px;
+  background-color: #98B5A4;
+  color:#072104;
 
-  font-size: 0.7em;
-  width: 10%;
-  &:active,
-  :hover {
-    color: grey;
-  }
 `;
 
-export const BtLogin = styled.div`
+export const TxtNew = styled.li`
+  list-style-type: none;
   border: none;
-  color: #EAD9F6;
-  font-weight: bold;
-  align-items: center;
-  justify-content: space-around;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-right: 25px;
+  border-radius: 0.2vw;
+  background-color: #98B5A4;
+  color:#072104;
 
 
-  font-size: 0.7em;
-  width: 10%;
-  &:active,
-  :hover {
-    color: grey;
-  }
+
 `;
 
-export const BtHome = styled.div`
+export const TxtRegistrate = styled.li`
+  list-style-type: none;
   border: none;
-  justify-content: space-around;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 0.2vw;
+  border-bottom: 2px solid #98B5A4;
+  background-color: #98B5A4;
+  color:#072104;
 
-  color: #EAD9F6;
-  font-weight: bold;
-  font-size: 0.7em;
-  width: 10%;
 
 
-  &:active,
-  :hover {
-    color: grey;
-  }
 `;
+
+
+

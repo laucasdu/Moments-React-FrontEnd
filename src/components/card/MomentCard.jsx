@@ -35,10 +35,8 @@ function MomentCard({moment, deleteMoment, editMoment}) {
           <BtComment><i className="fa-regular fa-comment-dots fa-2x fa-lg"></i></BtComment>
         </CtIcons>
         <CtIconsModify>
-          {/* <ButtonEdit onClick={() => editMoment(moment.id)}>
+          <BtEdit onClick={() => editMoment(moment.id)}>
             <Link to="/form">
-         <i className="fa-solid fa-pen-to-square"></i></Link></ButtonEdit> */}
-          <BtEdit> <Link to="/form">
          <i className="fa-solid fa-pen-to-square"></i></Link></BtEdit>
           <BtDelete onClick={() => deleteMoment(moment.id)}>
           <i className="fa-solid fa-trash-can"></i></BtDelete>

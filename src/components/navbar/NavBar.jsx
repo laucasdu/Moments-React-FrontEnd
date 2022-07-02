@@ -7,11 +7,10 @@ import {
   BtSearch, 
   CtLogo,
   TxtLogo, 
-  BtCreate,
-  BtLogin,
-  BtHome,
   CtInfo,
-  TxtBtHome
+  TxtHome,
+  TxtNew,
+  TxtRegistrate,
   } 
   from './Navbar.styled'
 
@@ -21,37 +20,29 @@ function NavBar() {
     <>
         <CtNavbar>
           <CtLogo>
-            <TxtLogo>Moments</TxtLogo>
+            <TxtLogo>MOMENTS</TxtLogo>
           </CtLogo>
           <CtSearch>
-            <Input type="text" placeholder="Search..." />
+            <Input type="text" placeholder="Title moment..." />
             <BtSearch><i className="fa-solid fa-magnifying-glass"></i></BtSearch>          
           </CtSearch>
 
 
         <CtInfo>
         <Link to="/">
-            <BtHome>
               {/* <i className="fa-solid fa-house fa-2xl"></i> */}
-              <TxtBtHome>Home</TxtBtHome>
-            </BtHome>
+              <TxtHome>Home</TxtHome>
           </Link>
 
           <Link to="/form">
-            <BtCreate>
               {/* <i className="fa-solid fa-circle-plus fa-2xl"></i> */}
-              <TxtBtHome>Create</TxtBtHome>
+              <TxtNew>New</TxtNew>
 
-            </BtCreate>
           </Link>        
 
           <Link to="/logIn">
-            <BtLogin>
               {/* <i className="fa-solid fa-user fa-2xl"></i> */}
-              <TxtBtHome>Registrate</TxtBtHome>
-
-              
-            </BtLogin>
+              <TxtRegistrate>Registrate</TxtRegistrate>
           </Link>
           </CtInfo>
           </CtNavbar>

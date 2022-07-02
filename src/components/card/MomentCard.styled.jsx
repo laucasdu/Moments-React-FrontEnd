@@ -16,7 +16,6 @@ export const CtCard = styled.div`
   }
 `;
 
-
 export const CtImage = styled.div`
     border-top: 5px solid #072104;
     display: flex;
