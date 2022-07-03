@@ -2,6 +2,7 @@
     [
     {
         "id": "1",
+        "user": "user",
         "title": "Noruega",
         "imgUrl": "https://www.tierrasinsolitas.com/wp-content/uploads/2019/05/lago-di-braies-dolomitas-italia.jpg",
         "description": "Lorem ipsum"

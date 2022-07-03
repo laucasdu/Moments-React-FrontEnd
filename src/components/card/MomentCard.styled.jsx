@@ -1,5 +1,10 @@
 import styled from "styled-components";
 
+export const Anchor = styled.a`
+  text-decoration: none;
+  color: black;
+`;
+
 export const CtCard = styled.div`
   display: flex;
   flex-direction: column;
@@ -14,6 +19,7 @@ export const CtCard = styled.div`
     transform: scale(0.96, 0.96);
     opacity: 0.8;
   }
+
 `;
 
 export const CtImage = styled.div`
@@ -118,4 +124,26 @@ export const TxtDescription = styled.p`
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;*/
+`;
+export const CtUser = styled.div`
+  display: flex;
+  flex-direction: row
+
+`;
+
+export const UserPhoto = styled.p`
+align-items: flex-end;
+margin-left: 5%;
+`;
+
+export const User = styled.image`
+width: 20%;
+margin-top: 5%;
+align-items: flex-start;
+justify-content: space-between;
+`;
+
+export const UserName = styled.h5`
+  font-size: large;
+  font-weight: 400;
 `;

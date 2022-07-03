@@ -23,7 +23,7 @@ function NavBar() {
             <TxtLogo>MOMENTS</TxtLogo>
           </CtLogo>
           <CtSearch>
-            <Input type="text" placeholder="Title moment..." />
+            <Input type="text" placeholder="Title moment..." autocomplete="on"/>
             <BtSearch><i className="fa-solid fa-magnifying-glass"></i></BtSearch>          
           </CtSearch>
 

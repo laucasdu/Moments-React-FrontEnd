@@ -15,6 +15,9 @@ function Router() {
                 <Route path="/moment/:id" element={<Details />} />
                 <Route path="/logIn" element={<LogInPage />} />
                 <Route path="/form" element={<FormPage />} />
+                <Route path="/form/:id" element={<FormPage />} />
+
+
 
 
 

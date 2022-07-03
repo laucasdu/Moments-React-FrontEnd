@@ -4,10 +4,10 @@ import { momentServices} from '../../services/momentServices'
 import { CtMomentList } from './MomentsList.styled'
 //import data from "../../assets/data/dbAxios.json"
 
-function MomentsList({editMoment}) {
+function MomentsList() {
 
   const [moments, setMoments] = useState([]);
-  // console.log(moments)
+
 
   useEffect(()=> {
     getAllMoments();
@@ -19,32 +19,42 @@ function MomentsList({editMoment}) {
       });
     };
 
-    const deleteMoment = (id) => {
-      let momentToDelete = moments.filter((moment) => moment.id === id);
-      let deleteConfirmed = window.confirm(
-        `Really remove ${momentToDelete[0].title} from the list?`
-      );
-      if (!deleteConfirmed) return;
-      let filterMoments = moments.filter((moment) => moment.id !== id);
-      console.log(filterMoments);
+    // const deleteMoment = (id) => {
+    //   let momentToDelete = moments.filter((moment) => moment.id === id);
+    //   let deleteConfirmed = window.confirm(
+    //     `Really remove ${momentToDelete[0].title} from the list?`
+    //   );
+    //   if (!deleteConfirmed) return;
+    //   let filterMoments = moments.filter((moment) => moment.id !== id);
+    //   console.log(filterMoments);
   
-      momentServices.deleteMoment(parseInt(id)).then((res) => {
-        if (res.id === id) setMoments(filterMoments);
-      });
+    //   momentServices.deleteMoment(parseInt(id)).then((res) => {
+    //     if (res.id === id) setMoments(filterMoments);
+    //   });
+    // };
+
+
+        // Funció per eliminar una pel·lícula
+    const deleteMoment = (id) => {
+        momentServices.deleteMoment(id).then((res) => {
+            getAllMoments()
+        });
     };
+
+
+
 
 
   return (
 
     <>
       <CtMomentList>
-        {
-            moments.map((moment, key)=> (
+          
+          {moments.map((moment, key)=> (
               <MomentCard 
               key={key} 
               moment={moment}
               deleteMoment={deleteMoment}
-              editMoment={editMoment}
               />
       
         ))}
@@ -52,6 +62,7 @@ function MomentsList({editMoment}) {
       </>
   )
 }
+
 
 export default MomentsList
 
