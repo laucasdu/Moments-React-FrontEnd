@@ -20,6 +20,21 @@ export const CtCard = styled.div`
     opacity: 0.8;
   }
 
+  @media screen and (max-width: 820px) {
+    width: 350px;
+    height: 350px;
+    margin-left: 8%;
+    
+  }
+
+  @media screen and (max-width: 415px) {
+    width: 400px;
+    height: 450px;
+    font-size: 1.5rem;
+    margin-left: 13%;
+    margin-top: 1%;
+  }
+
 `;
 
 export const CtImage = styled.div`
@@ -27,7 +42,7 @@ export const CtImage = styled.div`
     display: flex;
     justify-content: center;
     width: 100%;
-    height: 80%;
+    height: 100%;
     overflow: hidden;
 `;
 

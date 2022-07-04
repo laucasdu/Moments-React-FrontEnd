@@ -67,7 +67,7 @@ export const BtEdit = styled.button`
   height: 40px;
   font-size: small;
   align-items: center;
-  margin-top: 50px;
+  margin-top: 20px;
   margin-right: 10px;
   background-color: #98B5A4;
   border: none;
@@ -95,7 +95,7 @@ export const BtCancel = styled.button`
   font-size: small;
   background-color: none;
   align-items: center;
-  margin-top: 50px;
+  margin-top: 20px;
   background-color: #98B5A4;
   border: none;
   font-weight: 800;
@@ -122,10 +122,6 @@ export const CtButton = styled.div`
  flex-direction: row;
  width: 100%;
  color:#072104;
-
-
-
- 
 
   &:hover {
     color: #1D0B29;
@@ -158,7 +154,7 @@ export const CtTitlePrincipal = styled.div`
 
 export const TxtPrincipal = styled.h1`
   color:#072104;
-  padding-left: 30%;
+  padding-left: 45%;
   font-size: 30px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 

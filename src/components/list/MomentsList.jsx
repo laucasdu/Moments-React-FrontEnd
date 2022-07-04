@@ -19,27 +19,27 @@ function MomentsList() {
       });
     };
 
-    // const deleteMoment = (id) => {
-    //   let momentToDelete = moments.filter((moment) => moment.id === id);
-    //   let deleteConfirmed = window.confirm(
-    //     `Really remove ${momentToDelete[0].title} from the list?`
-    //   );
-    //   if (!deleteConfirmed) return;
-    //   let filterMoments = moments.filter((moment) => moment.id !== id);
-    //   console.log(filterMoments);
-  
-    //   momentServices.deleteMoment(parseInt(id)).then((res) => {
-    //     if (res.id === id) setMoments(filterMoments);
-    //   });
-    // };
-
-
-        // Funció per eliminar una pel·lícula
     const deleteMoment = (id) => {
-        momentServices.deleteMoment(id).then((res) => {
-            getAllMoments()
-        });
+      let momentToDelete = moments.filter((moment) => moment.id === id);
+      let deleteConfirmed = window.confirm(
+        `Really remove ${momentToDelete[0].title} from the list?`
+      );
+      if (!deleteConfirmed) return;
+      let filterMoments = moments.filter((moment) => moment.id !== id);
+      console.log(filterMoments);
+  
+      momentServices.deleteMoment(parseInt(id)).then((res) => {
+        if (res.id === id) setMoments(filterMoments);
+      });
     };
+
+
+    //     // Funció per eliminar una pel·lícula
+    // const deleteMoment = (id) => {
+    //     momentServices.deleteMoment(id).then((res) => {
+    //         getAllMoments()
+    //     });
+    // };
 
 
 

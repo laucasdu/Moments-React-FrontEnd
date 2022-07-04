@@ -20,7 +20,7 @@ function FormMoment() {
   const {id} = useParams();
   const [newMoment, setNewMoment] = useState({});
   const [moments, setMoments] = useState([]);
-  const [editActive, setEditActive] = useState(false);
+  const [editActive, setEditActive] = useState(id);
 
   let navigate = useNavigate();
 
@@ -31,7 +31,7 @@ function FormMoment() {
 
 
 
- // Funció per cridar la id de la card del moment
+ // Funció per cridar la id del moment
  const getMomentById = (id) => {
   momentServices.getMomentById(id).then((res) => {
     if (res) {
@@ -57,17 +57,19 @@ const handleSubmitCreateUpdate = (e) => {
   };
 
 
-// const handleReset = () => {
-//     navigate('/', {replace: true});
-//   }
+const handleReset = () => {
+    navigate('/', {replace: true});
+  }
 
 
 // Funció per crear un moment
 const createMoment = (data) => {
     momentServices.createMoment(data).then((res) => {
-      if(res);
+      // if(res);
     });
     resetInputsForm();
+    navigate('/', {replace: true});
+
   }
 
 // Funció per modificar un moment
@@ -76,10 +78,8 @@ const updateMoment = (newMoment) => {
     let momentToUpdate = moments.map((moment) => moment.id === newMoment.id ? newMoment : moment) 
     setMoments(momentToUpdate)
   })
-  
-  navigate('/', {replace: true}); 
   resetInputsForm();
-  setEditActive(false)  
+  navigate('/', {replace: true}); 
   };
 
 
@@ -96,7 +96,7 @@ const resetInputsForm = () => {
             <CtForm>
             <Form onSubmit={handleSubmitCreateUpdate}>
               <CtTitlePrincipal> 
-            <TxtPrincipal>Formulario</TxtPrincipal>
+            <TxtPrincipal>FORM</TxtPrincipal>
             </CtTitlePrincipal>
               <CtTxt>Title</CtTxt>
                   <Input
@@ -127,8 +127,8 @@ const resetInputsForm = () => {
                      ) : ( 
                     <BtEdit type="submit">SUBMIT</BtEdit>
                     )} 
-                    {/* <BtCancel type="reset" onClick={handleReset}>CANCEL</BtCancel> */}
-                    <BtCancel type="reset" onClick={resetInputsForm}>CANCEL</BtCancel>
+                    <BtCancel type="reset" onClick={handleReset}>CANCEL</BtCancel>
+                    {/* <BtCancel type="reset" onClick={resetInputsForm}>CANCEL</BtCancel> */}
 
                     </CtButton>
                 </Form>

@@ -8,7 +8,15 @@ export const CtNavbar = styled.div`
   height: 5vw;
   background-color: #072104;
 
+  @media screen and (max-width: 820px) {
+    height: 200px;
+    font-size: 1.5rem;
+  }
 
+  @media screen and (max-width: 415px) {
+    margin-bottom: 6%;
+
+  }
 `;
 
 export const CtLogo = styled.div`
@@ -52,6 +60,8 @@ export const Input = styled.input`
   outline: none;
   background-color: rgba(249, 249, 249, 0.1843137255);
   --webkit-backdrop-filter: blur( 0.7rem );
+
+  
 `;
 
 export const BtSearch = styled.button`

@@ -16,7 +16,7 @@ function Moment() {
 
   const [moment, setMoment] = useState([]);
   
-  const { id } = useParams();
+  const {id} = useParams();
 
   useEffect(
     () => {
@@ -28,7 +28,7 @@ function Moment() {
   const getMomentById = (id) => {
     momentServices.getMomentById(id).then((res) => {
       setMoment(res);
-      console.log(res);
+      // console.log(res);
     });
   };
 
