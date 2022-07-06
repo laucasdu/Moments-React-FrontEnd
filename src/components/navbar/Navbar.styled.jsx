@@ -38,7 +38,7 @@ export const TxtLogo = styled.h1`
 `;
 
 //Search
-export const CtSearch = styled.div`
+export const CtSearch = styled.form`
   width: 50%;
   display: flex;
   justify-content: center;

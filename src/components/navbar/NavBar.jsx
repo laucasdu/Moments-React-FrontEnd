@@ -1,5 +1,7 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from "react-router-dom";
+import { momentServices } from '../../services/momentServices';
+import Search from '../search/Search';
 import { 
   CtNavbar, 
   CtSearch, 
@@ -15,6 +17,31 @@ import {
   from './Navbar.styled'
 
 function NavBar() {
+
+// const [searchMoment, setSearchMoment] = useState("");
+
+
+  // const searchMoment = (data) => {
+  //   momentServices.searchMoment(data).then((res) => {
+  //     return(res);
+  //     });
+  //   };
+
+
+  // const onInputChange = (e) => {
+  //     setSearchMoment(e.target.value);
+  //     // console.log(e)
+  //   };
+
+
+  // const handleSubmit = (e) => {
+  //     e.preventDefault();
+  //     searchMoment(searchMoment);
+  //     //console.log(search)
+
+  // };
+
+
   return (
 
     <>
@@ -22,11 +49,9 @@ function NavBar() {
           <CtLogo>
             <TxtLogo>MOMENTS</TxtLogo>
           </CtLogo>
-          <CtSearch>
-            <Input type="text" placeholder="Title moment..." autocomplete="on"/>
-            <BtSearch><i className="fa-solid fa-magnifying-glass"></i></BtSearch>          
-          </CtSearch>
 
+
+        <Search/>
 
         <CtInfo>
         <Link to="/">

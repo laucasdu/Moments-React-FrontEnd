@@ -2,16 +2,23 @@ import React, { useEffect, useState } from 'react'
 import MomentCard from '../card/MomentCard';
 import { momentServices} from '../../services/momentServices'
 import { CtMomentList } from './MomentsList.styled'
+import Search from '../search/Search';
 //import data from "../../assets/data/dbAxios.json"
 
 function MomentsList() {
 
   const [moments, setMoments] = useState([]);
+  const [search, setSearch] = useState("");
+
 
 
   useEffect(()=> {
-    getAllMoments();
-  }, []);
+    search == "" ? getAllMoments()
+    :
+    searchMoment(search)
+    
+  }, [search, moments]);
+
 
   const getAllMoments = () => {
     momentServices.getAllMoments().then((res) => {
@@ -34,14 +41,21 @@ function MomentsList() {
     };
 
 
-    //     // Funció per eliminar una pel·lícula
-    // const deleteMoment = (id) => {
-    //     momentServices.deleteMoment(id).then((res) => {
-    //         getAllMoments()
-    //     });
-    // };
+    const searchMoment = (data) => {
+      momentServices.searchMoment(data).then((res) => {
+        setMoments(res);
+      
+        // console.log(res)
+        // console.log(search);
+        // return(res);
+        });
+      };
 
 
+
+
+
+   
 
 
 
@@ -49,12 +63,17 @@ function MomentsList() {
 
     <>
       <CtMomentList>
-          
+          <Search 
+          searchMoment={searchMoment}
+          setSearch={setSearch}
+          search={search}
+          /> 
           {moments.map((moment, key)=> (
               <MomentCard 
               key={key} 
               moment={moment}
               deleteMoment={deleteMoment}
+
               />
       
         ))}

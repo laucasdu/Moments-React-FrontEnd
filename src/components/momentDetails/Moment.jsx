@@ -14,7 +14,7 @@ import {
 
 function Moment() {
 
-  const [moment, setMoment] = useState([]);
+  const [moment, setMoment] = useState({ comments: []});
   
   const {id} = useParams();
 

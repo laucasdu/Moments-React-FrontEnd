@@ -32,7 +32,7 @@ export const momentServices = {
           return moments;
         },
 
-        deleteMoment(id) {
+       deleteMoment(id) {
           const deletedMoment = axios
           .delete(baseURL + "/moments/" + id)
           .then((res) => res.data);
@@ -46,6 +46,14 @@ export const momentServices = {
               return createNewMoment;
           },
 
+
+        searchMoment(search) {
+          const moments = axios.get(`${baseURL}/moments?search=${search}`).then((res) => {
+            return res.data;
+          });
+          return moments;
+        },
+      
 
  };
    

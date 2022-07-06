@@ -42,7 +42,7 @@ export const CtImage = styled.div`
     display: flex;
     justify-content: center;
     width: 100%;
-    height: 100%;
+    height: 60%;
     overflow: hidden;
 `;
 
@@ -50,6 +50,8 @@ export const Imatge = styled.img`
   object-fit: cover;
   object-position: center;
   width: 100%;
+  height: 100%;
+
 `;
 
 export const CtCardInfo = styled.div`

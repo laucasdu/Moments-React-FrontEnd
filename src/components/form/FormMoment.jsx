@@ -52,6 +52,7 @@ const handleSubmitCreateUpdate = (e) => {
       !editActive? 
       createMoment(newMoment)
       :updateMoment(newMoment);
+
       navigate('/', {replace: true});
       resetInputsForm();
   };
@@ -122,11 +123,10 @@ const resetInputsForm = () => {
                     placeholder="Text description..."
                   ></InputDescription>
                   <CtButton>
-                    {editActive ? ( //Condició per fer que canvi de botó segons el que volem fer
-                    <BtEdit type="submit">EDIT</BtEdit>
-                     ) : ( 
-                    <BtEdit type="submit">SUBMIT</BtEdit>
-                    )} 
+                    {editActive   //Condició per fer que canvi de botó segons el que volem fer
+                    ? <BtEdit type="submit">EDIT</BtEdit>
+                    : <BtEdit type="submit">SUBMIT</BtEdit>
+                    } 
                     <BtCancel type="reset" onClick={handleReset}>CANCEL</BtCancel>
                     {/* <BtCancel type="reset" onClick={resetInputsForm}>CANCEL</BtCancel> */}
 
