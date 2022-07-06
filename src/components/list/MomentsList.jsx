@@ -63,13 +63,13 @@ function MomentsList() {
   return (
 
     <>
-        <CtSearch>
+          <searchContainer>
           <Search 
           searchMoment={searchMoment}
           setSearch={setSearch}
           search={search}
           /> 
-          </CtSearch>
+          </searchContainer>
           <CtMomentList>
           {moments.map((moment, key)=> (
               <MomentCard 

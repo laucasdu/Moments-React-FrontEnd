@@ -2,41 +2,60 @@ import styled from "styled-components";
 
 //Search
 export const CtSearch = styled.form`
-  width: 50%;
+  position: absolute;
+  width: 100%;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  /* margin-top: 20%; */
-  z-index: -120px;
-  position: relative;
-  /* position: fixed; */
-  margin-left: 15%;
-
+  margin: -143px auto 0 auto;
+  /* justify-content: center; */
+  /* border-radius: 8rv; */
+  /* align-items: center; */
+  /* box-shadow: 0 2px 20px #98B5A4;  */
+  /* background-color: #98B5A4;  */
+  transform: scale(0.4);
+  border: 2px solid #98B5A4; 
 `;
 
 export const Input = styled.input`
-justify-content: center;
-align-items: center;
+  justify-content: center;
+  align-items: center;
   width: 100%;
-  height: 6vh;
-  min-width: 10rem;
+  /* height: 12vh; */
+  /* min-width: 10rem; */
   position: relative;
   font-family: 'Courier New', Courier, monospace;
   font-weight: 600;
   border: none;
   padding: 0 4rem 0 1.5rem;
-  border-radius: 0.2vw;
-  font-size: 14px;
+  /* border-radius: 0.2vw; */
+  font-size: 50px;
   outline: none;
-  background-color: red;
-
-  
+  background-color: #98B5A4;
+  color:#072104;
 `;
 
 export const BtSearch = styled.button`
-  background: none;
-  color:#98B5A4;
-  border: none;
+  padding: 35px;
+  width: 25%;
+  background: #072104;
+  color: white;
+  float: left;
+  text-align: center;
+  font-size: 50px;
+  cursor: pointer;
+  /* transition: 0.3s; */
+  border-radius: 0;
+`;
+
+export const searchContainer = styled.form`
   position: absolute;
-  right: 2%;
+  /* width: 50%; */
+  display: flex;
+  /* margin: -143px auto 0 auto; */
+  /* justify-content: center; */
+  /* border-radius: 8rv; */
+  /* align-items: center; */
+  /* box-shadow: 0 2px 20px #98B5A4;  */
+  /* background-color: #98B5A4;  */
+  /* transform: scale(0.6); */
+  border: 2px solid #98B5A4; 
 `;
