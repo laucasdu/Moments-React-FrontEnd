@@ -6,10 +6,17 @@ export const CtSearch = styled.form`
   display: flex;
   justify-content: center;
   align-items: center;
+  /* margin-top: 20%; */
+  z-index: -120px;
   position: relative;
+  /* position: fixed; */
+  margin-left: 15%;
+
 `;
 
 export const Input = styled.input`
+justify-content: center;
+align-items: center;
   width: 100%;
   height: 6vh;
   min-width: 10rem;
@@ -21,8 +28,7 @@ export const Input = styled.input`
   border-radius: 0.2vw;
   font-size: 14px;
   outline: none;
-  background-color: rgba(249, 249, 249, 0.1843137255);
-  --webkit-backdrop-filter: blur( 0.7rem );
+  background-color: red;
 
   
 `;

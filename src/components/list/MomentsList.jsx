@@ -3,6 +3,7 @@ import MomentCard from '../card/MomentCard';
 import { momentServices} from '../../services/momentServices'
 import { CtMomentList } from './MomentsList.styled'
 import Search from '../search/Search';
+import { CtSearch } from '../search/Search.styled';
 //import data from "../../assets/data/dbAxios.json"
 
 function MomentsList() {
@@ -62,12 +63,14 @@ function MomentsList() {
   return (
 
     <>
-      <CtMomentList>
+        <CtSearch>
           <Search 
           searchMoment={searchMoment}
           setSearch={setSearch}
           search={search}
           /> 
+          </CtSearch>
+          <CtMomentList>
           {moments.map((moment, key)=> (
               <MomentCard 
               key={key} 

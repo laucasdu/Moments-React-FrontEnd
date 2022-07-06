@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Link } from "react-router-dom";
-import { momentServices } from '../../services/momentServices';
-import Search from '../search/Search';
+// import { momentServices } from '../../services/momentServices';
+// import Search from '../search/Search';
 import { 
   CtNavbar, 
   CtSearch, 
@@ -51,7 +51,7 @@ function NavBar() {
           </CtLogo>
 
 
-        <Search/>
+        {/* <Search/> */}
 
         <CtInfo>
         <Link to="/">

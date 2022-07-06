@@ -13,17 +13,14 @@ export const CtMomentList = styled.div`
 
 
 @media only screen and (max-width:820px) {
-
     grid-template-columns: 50% 50%;
 }
 
 @media only screen and (max-width:450px) {
-
    grid-template-columns: 100%;
 } 
 
 `;
-
 
 
 

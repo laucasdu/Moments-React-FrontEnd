@@ -3,9 +3,9 @@ import styled from "styled-components";
 //Navbar
 export const CtNavbar = styled.div`
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   width: 100vw;
-  height: 5vw;
+  height: 20vw;
   background-color: #072104;
 
   @media screen and (max-width: 820px) {
@@ -20,15 +20,14 @@ export const CtNavbar = styled.div`
 `;
 
 export const CtLogo = styled.div`
-  height: 100%;
-  width: 10%;
+  width: 20%;
   font-size: 0,5em;
-  align-items: center;
-  justify-content: center;
+  /* align-items: center; */
+  /* justify-content: center; */
 `;
 
 export const TxtLogo = styled.h1`
-   color: #EAD9F6;
+  color: #EAD9F6;
   &:hover,
   :active,
   :link,
@@ -37,51 +36,53 @@ export const TxtLogo = styled.h1`
   }
 `;
 
-//Search
-export const CtSearch = styled.form`
-  width: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-`;
+// //Search
+// export const CtSearch = styled.form`
+//   width: 50%;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   position: relative;
+// `;
 
-export const Input = styled.input`
-  width: 100%;
-  height: 6vh;
-  min-width: 10rem;
-  position: relative;
-  font-family: 'Courier New', Courier, monospace;
-  font-weight: 600;
-  border: none;
-  padding: 0 4rem 0 1.5rem;
-  border-radius: 0.2vw;
-  font-size: 14px;
-  outline: none;
-  background-color: rgba(249, 249, 249, 0.1843137255);
-  --webkit-backdrop-filter: blur( 0.7rem );
+// export const Input = styled.input`
+//   width: 100%;
+//   height: 6vh;
+//   min-width: 10rem;
+//   position: relative;
+//   font-family: 'Courier New', Courier, monospace;
+//   font-weight: 600;
+//   border: none;
+//   padding: 0 4rem 0 1.5rem;
+//   border-radius: 0.2vw;
+//   font-size: 14px;
+//   outline: none;
+//   background-color: rgba(249, 249, 249, 0.1843137255);
+//   --webkit-backdrop-filter: blur( 0.7rem );
 
   
-`;
+// `;
 
-export const BtSearch = styled.button`
-  background: none;
-  color:#98B5A4;
-  border: none;
-  position: absolute;
-  right: 2%;
-`;
+// export const BtSearch = styled.button`
+//   background: none;
+//   color:#98B5A4;
+//   border: none;
+//   position: absolute;
+//   right: 2%;
+// `;
 
 //Menú
 export const CtInfo = styled.div`
     display: flex;
+    width: 20%;
     flex-direction: row;
     font-size: 25px;
+    margin-top: 25px;
     justify-content: space-around;
-    align-items: center;
     font-size: 25px;
     text-decoration: none;
-    margin-top: 5px;
+    /* margin-top: 5px; */
+    margin-right: 70px;
 
 `;
 
