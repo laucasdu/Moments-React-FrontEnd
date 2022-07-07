@@ -20,6 +20,8 @@ export const CtNavbar = styled.div`
 `;
 
 export const CtLogo = styled.div`
+display: flex;
+justify-content: center;
   width: 20%;
   font-size: 0,5em;
   /* align-items: center; */

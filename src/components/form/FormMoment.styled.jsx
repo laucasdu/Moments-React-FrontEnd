@@ -8,8 +8,8 @@ export const CtForm = styled.div`
 `;
 
 export const Form = styled.form`
-  width: 55%;
-  height: 61%;
+  width: 50%;
+  height: 60%;
   flex-direction: column;
   /* border-style: solid; */
   filter: drop-shadow(2px 1px 6px #7a8188 );
