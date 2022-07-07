@@ -52,7 +52,7 @@ export const CtImage = styled.div`
   }
 `;
 
-export const Image = styled.img`
+export const ImageUrl = styled.img`
   width: 100%;
   border-radius: 0.2vw;
   /* box-shadow: 0 0 8px grey; */

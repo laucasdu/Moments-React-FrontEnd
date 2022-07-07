@@ -51,8 +51,6 @@ export const InputDescription = styled.textarea`
   box-sizing: border-box;
   font-family: 'Courier New', Courier, monospace;
 
-
-
   @media (max-width: 450px) {
     padding: 5%;
     margin-bottom: 5%;

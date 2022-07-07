@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom';
 import { momentServices } from '../../services/momentServices'
 import {
   Container,
-  Image,
+  ImageUrl,
   CtMoment,
   CtTxt,
   CtImage,
@@ -37,7 +37,7 @@ function Moment() {
         <Container>
           <CtMoment>
           <CtImage>
-              <Image src={moment.imgUrl} alt="momentfoto" />
+              <ImageUrl src={moment.imgUrl} alt="momentfoto" />
             </CtImage>
             <CtTxt>
               <TxtTitle>{moment.title}</TxtTitle>

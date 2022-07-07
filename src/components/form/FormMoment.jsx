@@ -20,13 +20,17 @@ function FormMoment() {
   const {id} = useParams();
   const [newMoment, setNewMoment] = useState({});
   const [moments, setMoments] = useState([]);
-  const [editActive, setEditActive] = useState(id);
+  // const [editActive, setEditActive] = useState(id);
 
   let navigate = useNavigate();
 
 
   useEffect(() => {
-    getMomentById(id)
+    if (id){
+      getMomentById(id) 
+    }else{
+      resetInputsForm()
+    }
   }, [id]);
 
 
@@ -49,7 +53,7 @@ const onInputChange = (e) => {
 const handleSubmitCreateUpdate = (e) => {
       e.preventDefault();
 
-      !editActive? 
+      !id? 
       createMoment(newMoment)
       :updateMoment(newMoment);
 
@@ -66,6 +70,7 @@ const handleReset = () => {
 // Funció per crear un moment
 const createMoment = (data) => {
     momentServices.createMoment(data).then((res) => {
+      setMoments([...moments, res]);
       // if(res);
     });
     resetInputsForm();
@@ -123,7 +128,7 @@ const resetInputsForm = () => {
                     placeholder="Text description..."
                   ></InputDescription>
                   <CtButton>
-                    {editActive   //Condició per fer que canvi de botó segons el que volem fer
+                    {id   //Condició per fer que canvi de botó segons el que volem fer
                     ? <BtEdit type="submit">EDIT</BtEdit>
                     : <BtEdit type="submit">SUBMIT</BtEdit>
                     } 
