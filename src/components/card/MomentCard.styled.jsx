@@ -21,18 +21,15 @@ export const CtCard = styled.div`
   }
 
   @media screen and (max-width: 820px) {
-    width: 350px;
+    /* width: 350px;
     height: 350px;
-    margin-left: 8%;
+    margin-left: 8%; */
     
   }
 
   @media screen and (max-width: 415px) {
-    width: 400px;
-    height: 450px;
-    font-size: 1.5rem;
-    margin-left: 13%;
-    margin-top: 1%;
+    /* grid-template-columns: 47% 47%; */
+
   }
 
 `;
@@ -42,7 +39,7 @@ export const CtImage = styled.div`
     display: flex;
     justify-content: center;
     width: 100%;
-    height: 60%;
+    height: 70%;
     overflow: hidden;
 `;
 
@@ -142,18 +139,21 @@ export const TxtDescription = styled.p`
   text-overflow: ellipsis;
   overflow: hidden;*/
 `;
+
 export const CtUser = styled.div`
   display: flex;
   flex-direction: row
 
 `;
 
+
 export const UserPhoto = styled.p`
 align-items: flex-end;
 margin-left: 5%;
+
 `;
 
-export const User = styled.image`
+export const User = styled.p`
 width: 20%;
 margin-top: 5%;
 align-items: flex-start;

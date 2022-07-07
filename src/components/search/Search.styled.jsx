@@ -13,6 +13,16 @@ export const CtSearch = styled.form`
   /* background-color: #98B5A4;  */
   transform: scale(0.4);
   border: 2px solid #98B5A4; 
+
+  @media screen and (max-width: 820px) {
+    display: none;
+    
+  }
+
+  @media screen and (max-width: 415px) {
+    display: none;
+
+  }
 `;
 
 export const Input = styled.input`

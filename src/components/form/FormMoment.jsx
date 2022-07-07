@@ -39,7 +39,7 @@ function FormMoment() {
  const getMomentById = (id) => {
   momentServices.getMomentById(id).then((res) => {
     if (res) {
-    setNewMoment(res);
+    // setNewMoment(res);
     }
   });
 };
