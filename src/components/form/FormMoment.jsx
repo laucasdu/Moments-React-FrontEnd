@@ -39,7 +39,7 @@ function FormMoment() {
  const getMomentById = (id) => {
   momentServices.getMomentById(id).then((res) => {
     if (res) {
-    // setNewMoment(res);
+    setNewMoment(res);
     }
   });
 };
@@ -56,6 +56,7 @@ const handleSubmitCreateUpdate = (e) => {
       !id? 
       createMoment(newMoment)
       :updateMoment(newMoment);
+
 
       navigate('/', {replace: true});
       resetInputsForm();
@@ -130,7 +131,7 @@ const resetInputsForm = () => {
                   <CtButton>
                     {id   //Condició per fer que canvi de botó segons el que volem fer
                     ? <BtEdit type="submit">EDIT</BtEdit>
-                    : <BtEdit type="submit">SUBMIT</BtEdit>
+                    : <BtEdit type="submit">CREATE</BtEdit>
                     } 
                     <BtCancel type="reset" onClick={handleReset}>CANCEL</BtCancel>
                     {/* <BtCancel type="reset" onClick={resetInputsForm}>CANCEL</BtCancel> */}

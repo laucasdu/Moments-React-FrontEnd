@@ -5,11 +5,20 @@ export const CtForm = styled.div`
   justify-content: center;
   align-items: center; 
   flex-direction: row;
+  
+  @media only screen and (max-width:820px) {
+    display: none;
+
+}
+@media only screen and (max-width:450px) {
+    display: none;
+} 
 `;
+
 
 export const Form = styled.form`
   width: 50%;
-  height: 60%;
+  height: 55%;
   flex-direction: column;
   /* border-style: solid; */
   filter: drop-shadow(2px 1px 6px #7a8188 );

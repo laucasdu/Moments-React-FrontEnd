@@ -31,7 +31,7 @@ function MomentCard({moment, deleteMoment}) {
     <CtCard>
       <CtUser>
         <UserPhoto><i className="fa-solid fa-circle-user"></i></UserPhoto>
-        <User>Laura</User>
+        <User>laucasdu</User>
         <UserName>{moment.user}</UserName>
       </CtUser>
       <CtImage>

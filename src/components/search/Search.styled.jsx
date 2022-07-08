@@ -41,19 +41,38 @@ export const Input = styled.input`
   outline: none;
   background-color: #98B5A4;
   color:#072104;
+
+  @media screen and (max-width: 820px) {
+    display: none;
+    
+  }
+
+  @media screen and (max-width: 415px) {
+    display: none;
+
+  }
 `;
 
 export const BtSearch = styled.button`
   padding: 35px;
   width: 25%;
   background: #072104;
-  color: white;
+  color: #98B5A4;
   float: left;
   text-align: center;
   font-size: 50px;
   cursor: pointer;
   /* transition: 0.3s; */
-  border-radius: 0;
+
+  @media screen and (max-width: 820px) {
+    display: none;
+    
+  }
+
+  @media screen and (max-width: 415px) {
+    display: none;
+
+  }
 `;
 
 export const searchContainer = styled.form`
@@ -68,4 +87,14 @@ export const searchContainer = styled.form`
   /* background-color: #98B5A4;  */
   /* transform: scale(0.6); */
   border: 2px solid #98B5A4; 
+
+  @media screen and (max-width: 820px) {
+    display: none;
+    
+  }
+
+  @media screen and (max-width: 415px) {
+    display: none;
+
+  }
 `;

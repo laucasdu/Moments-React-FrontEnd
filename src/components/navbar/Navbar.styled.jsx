@@ -3,45 +3,43 @@ import styled from "styled-components";
 //Navbar
 export const CtNavbar = styled.div`
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   width: 100vw;
   height: 20vw;
   background-color: #072104;
 
+
   @media screen and (max-width: 820px) {
-    height: 200px;
-    font-size: 1.5rem;
+    display: none;
+   
   }
 
-  @media screen and (max-width: 415px) {
-    margin-bottom: 6%;
+  @media screen and (max-width: 390px) {
+    display: none;
+
 
   }
 `;
 
 export const CtLogo = styled.div`
-display: flex;
-justify-content: center;
-  width: 20%;
-  font-size: 0,5em;
-  /* align-items: center; */
-  /* justify-content: center; */
+  display: flex;
+  margin-left: 4%;
+  font-size: 1.5em;
 
   @media screen and (max-width: 820px) {
-    height: 200px;
-    font-size: 1.5rem;
+    margin-left: 25%;
+    margin-top: -3%;
   }
 
-  @media screen and (max-width: 415px) {
-    margin-bottom: 6%;
-
+  @media screen and (max-width: 390px) {
+    /* margin-bottom: 6%; */
   }
-
-
 `;
 
 export const TxtLogo = styled.h1`
   color: #EAD9F6;
+  font-weight: 600;
   &:hover,
   :active,
   :link,
@@ -50,59 +48,27 @@ export const TxtLogo = styled.h1`
   }
 
   @media screen and (max-width: 820px) {
-    height: 200px;
-    font-size: 1.5rem;
+    height: 500px;
+    font-size: 5rem;
+    justify-content: center;
+    align-items: center;
   }
 
-  @media screen and (max-width: 415px) {
+  @media screen and (max-width: 390px){
     margin-bottom: 6%;
 
   }
 
 `;
 
-// //Search
-// export const CtSearch = styled.form`
-//   width: 50%;
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-//   position: relative;
-// `;
-
-// export const Input = styled.input`
-//   width: 100%;
-//   height: 6vh;
-//   min-width: 10rem;
-//   position: relative;
-//   font-family: 'Courier New', Courier, monospace;
-//   font-weight: 600;
-//   border: none;
-//   padding: 0 4rem 0 1.5rem;
-//   border-radius: 0.2vw;
-//   font-size: 14px;
-//   outline: none;
-//   background-color: rgba(249, 249, 249, 0.1843137255);
-//   --webkit-backdrop-filter: blur( 0.7rem );
-
-  
-// `;
-
-// export const BtSearch = styled.button`
-//   background: none;
-//   color:#98B5A4;
-//   border: none;
-//   position: absolute;
-//   right: 2%;
-// `;
-
 //Menú
 export const CtInfo = styled.div`
     display: flex;
+    flex-direction: column;
     width: 20%;
     flex-direction: row;
     font-size: 25px;
-    margin-top: 25px;
+    margin-top: 45px;
     justify-content: space-around;
     font-size: 25px;
     text-decoration: none;
@@ -113,6 +79,7 @@ export const CtInfo = styled.div`
 
 export const TxtHome = styled.li`
   list-style-type: none;
+  font-weight: 600;
   border: none;
   color: white;
   padding: 15px 32px;
@@ -129,7 +96,7 @@ export const TxtHome = styled.li`
     display: none;
   }
 
-  @media screen and (max-width: 415px) {
+  @media screen and (max-width: 390px) {
     display: none;
 
   }
@@ -140,6 +107,7 @@ export const TxtHome = styled.li`
 export const TxtNew = styled.li`
   list-style-type: none;
   border: none;
+  font-weight: 600;
   color: white;
   padding: 15px 32px;
   text-align: center;
@@ -156,18 +124,17 @@ export const TxtNew = styled.li`
 
   }
 
-  @media screen and (max-width: 415px) {
+  @media screen and (max-width: 390px) {
     display: none;
 
   }
-
-
 
 
 `;
 
 export const TxtRegistrate = styled.li`
   list-style-type: none;
+  font-weight: 600;
   border: none;
   color: white;
   padding: 15px 32px;
@@ -185,7 +152,7 @@ export const TxtRegistrate = styled.li`
 
   }
 
-  @media screen and (max-width: 415px) {
+  @media screen and (max-width: 390px) {
     display: none;
 
   }
