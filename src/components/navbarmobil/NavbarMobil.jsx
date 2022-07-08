@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { CtNavbarMobil, CtIconos, TxtHome, TxtNew, TxtRegistrate, TxtLupa, TxtHeart } from './NavbarMobil.styled'
+import { CtNavbarMobil, CtIconos, BtNavbar , BtCreate} from './NavbarMobil.styled'
 
 function NavbarMobil() {
 
@@ -13,24 +13,24 @@ function NavbarMobil() {
 
     <CtIconos>
         <Link to="/">
-              <TxtHome><i className="fa-solid fa-house fa-2xl"></i></TxtHome>
+              <BtNavbar><i className="fa-solid fa-house fa-2xl"></i></BtNavbar>
           </Link>
           
           <Link to="">
-              <TxtLupa><i className="fa-solid fa-magnifying-glass fa-2xl"></i></TxtLupa>
+              <BtNavbar><i className="fa-solid fa-magnifying-glass fa-2xl"></i></BtNavbar>
           </Link> 
           
           <Link to="/form">
-              <TxtNew><i className="fa-solid fa-circle-plus fa-2xl"></i></TxtNew>
+              <BtCreate><i className="fa-solid fa-circle-plus fa-2xl"></i></BtCreate>
           </Link>     
           <Link to="">
-              <TxtHeart><i className="fa-solid fa-heart fa-2xl"></i></TxtHeart>
+              <BtNavbar><i className="fa-solid fa-heart fa-2xl"></i></BtNavbar>
           </Link> 
 
           <Link to="/logIn">
-              <TxtRegistrate><i className="fa-solid fa-user fa-2xl"></i></TxtRegistrate>
+              <BtNavbar><i className="fa-solid fa-user fa-2xl"></i></BtNavbar>
           </Link>
-          </CtIconos>
+        </CtIconos>
 
 
     </CtNavbarMobil>

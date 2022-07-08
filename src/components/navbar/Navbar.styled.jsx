@@ -11,8 +11,10 @@ export const CtNavbar = styled.div`
 
 
   @media screen and (max-width: 820px) {
-    display: none;
-   
+  /* height: 80px;
+  width: 100%;
+  background-color: #072104;
+    */
   }
 
   @media screen and (max-width: 390px) {
@@ -73,7 +75,7 @@ export const CtInfo = styled.div`
     font-size: 25px;
     text-decoration: none;
     /* margin-top: 5px; */
-    margin-right: 70px;
+    /* margin-right: 70px; */
 
 `;
 

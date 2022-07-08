@@ -9,10 +9,10 @@ function Home() {
   return (
 
     <>
+        {/* <NavbarMobilTop/> */}
         <NavBar/>
         <MomentsList/>
         <NavbarMobil/>
-        <NavbarMobilTop/>
     
     
     </>

@@ -10,15 +10,16 @@ export const CtMomentList = styled.div`
     
     
 @media only screen and (max-width:820px) {
-    grid-template-columns:45% 45%;
+    grid-template-columns:47% 47%;
     gap: 2em;  
-    margin-right: 5%;
 
 
     /* display: block; */
 }
-@media screen and (max-width: 360px) {
-   grid-template-columns: 100%;
+@media screen and (max-width: 415px) {
+   grid-template-columns: 80%;
+   gap: 0em;  
+
    /* margin-left: 8%; */
 
 } 

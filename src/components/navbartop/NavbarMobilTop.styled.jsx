@@ -6,11 +6,10 @@ export const CtNavbarMobilTop = styled.div`
   
 
   @media screen and (max-width: 820px) {
+    display: none;
   /* display: flex;
-  top:50%;
   height: 80px;
   width: 100%;
-  z-index: 10000;
   background-color: #072104; */
   }
 

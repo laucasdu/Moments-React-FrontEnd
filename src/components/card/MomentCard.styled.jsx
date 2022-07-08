@@ -12,7 +12,7 @@ export const Anchor = styled.a`
 export const CtCard = styled.div`
   display: flex;
   flex-direction: column;
-  margin: 5%;
+  /* margin: 5%; */
   filter: drop-shadow(2px 1px 6px #7a8188 );
   position: relative;
   background-color: white;
@@ -26,12 +26,14 @@ export const CtCard = styled.div`
   }
 
   @media screen and (max-width: 820px) {
-    margin: 25px;
+    /* margin: 25px; */
+    width: 90%;
     
   }
 
   @media screen and (max-width: 390px) {
     width: 100%;
+    /* margin-left: 18%; */
 
   }
 
@@ -186,17 +188,35 @@ export const CtTxt = styled.div`
   width: 100%;
 `;
 export const TxtTitle = styled.h2`
-  font-size: 1.8em;
+  font-size: 1.5em;
   font-weight: bold;
   margin-left: 2%;
   color: black;
+
+  @media screen and (max-width: 820px) {
+    font-size: 27px;
+  }
+
+  @media screen and (max-width: 390px) {
+    font-size: 18px;
+  }
+
 `;
 
+
 export const TxtDescription = styled.p`
-  font-size: 1.6em;
+  font-size: 1.4em;
   margin-left: 2%;
   color: #345226;
   margin-top: -3%;
+
+  @media screen and (max-width: 800px) {
+    font-size: 22px;
+  }
+
+  @media screen and (max-width: 390px) {
+    font-size: 22px;
+  }
   
 `;
 
