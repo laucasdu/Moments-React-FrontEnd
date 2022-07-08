@@ -33,7 +33,9 @@ function Search({searchMoment, search, setSearch}) {
             type="text"
             value={search}
             name="searchMoment"
-            placeholder="Title moment..."/>
+            placeholder="Title moment..."
+            autocomplete="on"
+            />
             
             <BtSearch type="submit"><i className="fa-solid fa-magnifying-glass"></i></BtSearch>          
           </CtSearch>

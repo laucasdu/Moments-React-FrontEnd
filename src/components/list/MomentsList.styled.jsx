@@ -19,7 +19,6 @@ export const CtMomentList = styled.div`
 @media screen and (max-width: 415px) {
    grid-template-columns: 80%;
    gap: 0em;  
-
    /* margin-left: 8%; */
 
 } 

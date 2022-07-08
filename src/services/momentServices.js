@@ -19,6 +19,7 @@ export const momentServices = {
     },
 
     getMomentById(id) {
+      console.log(id)
         const moments = axios
           .get(baseURL + "/moments/" + id)
           .then((res) => res.data);

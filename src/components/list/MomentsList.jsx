@@ -11,7 +11,6 @@ function MomentsList() {
   const [search, setSearch] = useState("");
 
 
-
   useEffect(()=> {
     search == "" ? getAllMoments() : searchMoment(search)
   }, [search, moments]);
@@ -24,9 +23,9 @@ function MomentsList() {
     };
 
     const deleteMoment = (id) => {
-      let momentToDelete = moments.filter((moment) => moment.id === id);
+      let momentDelete = moments.filter((moment) => moment.id === id);
       let deleteConfirmed = window.confirm(
-        `Really remove ${momentToDelete[0].title} from the list?`
+        `Delete ${momentDelete[0].title} from the list?`
       );
       if (!deleteConfirmed) return;
       let filterMoments = moments.filter((moment) => moment.id !== id);

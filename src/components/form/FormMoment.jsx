@@ -35,6 +35,12 @@ function FormMoment() {
 
 
 
+  // useEffect(() => {
+  //   id?
+  //     getMomentById(id) : setNewMoment({ title: "", description: "", imgUrl: "" });
+  // }, [id]);
+
+
  // Funció per cridar la id del moment
  const getMomentById = (id) => {
   momentServices.getMomentById(id).then((res) => {
@@ -58,7 +64,7 @@ const handleSubmitCreateUpdate = (e) => {
       :updateMoment(newMoment);
 
 
-      navigate('/', {replace: true});
+      // navigate('/', {replace: true});
       resetInputsForm();
   };
 
