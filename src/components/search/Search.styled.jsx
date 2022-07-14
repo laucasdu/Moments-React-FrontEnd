@@ -64,6 +64,18 @@ export const BtSearch = styled.button`
   cursor: pointer;
   /* transition: 0.3s; */
 
+  :invalid ~ span:after {
+    content: '✖';
+    padding-left: 5px;
+    position: absolute;
+}
+
+:valid ~ span:after {
+    content: '✓';
+    padding-left: 5px;
+    position: absolute;
+}
+
   @media screen and (max-width: 820px) {
     display: none;
     

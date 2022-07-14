@@ -34,7 +34,6 @@ function Search({searchMoment, search, setSearch}) {
             value={search}
             name="searchMoment"
             placeholder="Title moment..."
-            autocomplete="on"
             />
             
             <BtSearch type="submit"><i className="fa-solid fa-magnifying-glass"></i></BtSearch>          

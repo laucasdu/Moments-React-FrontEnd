@@ -76,3 +76,19 @@ export const TxtDescription = styled.p`
     margin-top: -8%;
   }
 `;
+
+export const CtComments = styled.div`
+  display: flex;
+  flex-direction: row;
+`;
+
+export const TxtListComments = styled.h3`
+align-items: center;
+justify-content: center;
+`;
+
+export const TxtComments = styled.h5`
+  font-weight: normal;
+  padding-bottom: 5rem;
+`;
+

@@ -11,14 +11,27 @@ function MomentsList() {
   const [search, setSearch] = useState("");
 
 
-  useEffect(()=> {
-    search == "" ? getAllMoments() : searchMoment(search)
-  }, [search, moments]);
+  // useEffect(()=> {
+  //   getAllMoments();
+  //   search === "" ? getAllMoments() : searchMoment(search)
+  // }, [search, moments]);
 
+
+
+  useEffect(()=> {
+    getAllMoments();
+  }, []);
+
+
+   useEffect(()=> {
+    getAllMoments();
+    search === "" ? getAllMoments() : searchMoment(search)
+  }, [search]);
 
   const getAllMoments = () => {
     momentServices.getAllMoments().then((res) => {
       setMoments(res);
+      // console.log(res)
       });
     };
 
@@ -27,12 +40,13 @@ function MomentsList() {
       let deleteConfirmed = window.confirm(
         `Delete ${momentDelete[0].title} from the list?`
       );
-      if (!deleteConfirmed) return;
-      let filterMoments = moments.filter((moment) => moment.id !== id);
-      console.log(filterMoments);
+      // if (!deleteConfirmed) return;
+      // let filterMoments = moments.filter((moment) => moment.id !== id);
+      // console.log(filterMoments);
   
       momentServices.deleteMoment(parseInt(id)).then((res) => {
-        if (res.id === id) setMoments(filterMoments);
+        if(res)
+        getAllMoments();
       });
     };
 
@@ -46,12 +60,6 @@ function MomentsList() {
         // return(res);
         });
       };
-
-
-
-
-
-   
 
 
 

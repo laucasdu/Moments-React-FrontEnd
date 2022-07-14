@@ -225,19 +225,35 @@ export const CtUser = styled.div`
   flex-direction: row;
   font-size: 20px;
   color: #345226;
+  align-items: center;
+  justify-content: center;
 `;
 
-export const UserPhoto = styled.p`
-margin-left: 9%;
+export const UserPhoto = styled.img`
+  width: 100%;
+  object-fit: cover;
 `;
 
-export const User = styled.p`
-margin-left: 4%;
-margin-top: 5.3%;
-font-size: 20px;
-color: #345226;
+export const User = styled.div`
+width: 20%;
+`;
+
+
+export const CtUserName = styled.div`
+width: 50%;
+margin-right: 20%;
 
 `;
 
 export const UserName = styled.h5`
+width: 50%;
+margin-left: 10%;
+
 `;
+
+export const Num = styled.h2`
+color: #345226;
+
+`;
+
+

@@ -19,20 +19,24 @@ import {
   CtUser,
   UserPhoto,
   UserName,
-  User
+  User,
+  Num,
+  CtUserName
 } from './MomentCard.styled';
 
 
 function MomentCard({moment, deleteMoment}) {
 
+  // console.log(moment)
 
   return (
 
     <CtCard>
       <CtUser>
-        <UserPhoto><i className="fa-solid fa-circle-user"></i></UserPhoto>
-        <User>laucasdu</User>
-        <UserName>{moment.user}</UserName>
+      <User>
+        <UserPhoto src={moment.creator.userImg} alt={moment.creator.userName}></UserPhoto></User>
+        <CtUserName>
+        <UserName>{moment.creator.userName}</UserName> </CtUserName>
       </CtUser>
       <CtImage>
       <Link to = {`/moments/${moment.id}`}>
@@ -40,21 +44,24 @@ function MomentCard({moment, deleteMoment}) {
           </Link>
       </CtImage>
       <CtCardInfo>
+        
         <CtIcons>
+
           <BtFav><i className="fa-regular fa-thumbs-up fa-2x fa-lg"></i></BtFav>
-          <BtComment><i className="fa-regular fa-comment-dots fa-2x fa-lg"></i></BtComment>
+          <Num>{moment.commentCount}</Num>
+
+          <BtComment>
+
+          <Anchor href={`/moments/${moment.id}`}><span>
+          <i className="fa-regular fa-comment-dots fa-2x fa-lg"></i></span></Anchor></BtComment>
+
+          {/* <BtComment><i className="fa-regular fa-comment-dots fa-2x fa-lg"></i></BtComment> */}
         </CtIcons>
         <CtIconsModify>
-
-          {/* <BtEdit onClick={() => editMoment(moment.id)}>
-            <Link to="/update">
-         <i className="fa-solid fa-pen-to-square"></i></Link></BtEdit> */}
-
-
+         
          <BtEdit>
          <Anchor href={`/form/${moment.id}`}><span>
          <i className="fa-solid fa-pen-to-square"></i></span></Anchor></BtEdit>
-
 
           <BtDelete onClick={() => deleteMoment(moment.id)}>
           <i className="fa-solid fa-trash-can"></i></BtDelete>

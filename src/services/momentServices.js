@@ -41,8 +41,11 @@ export const momentServices = {
       },
 
       createMoment(data) {
+
           const createNewMoment = axios
           .post(baseURL + "/moments/", data)
+
+          // .post(baseURL + "/moments/", {...data,userId:1})
           .then((res) => res.data);
               return createNewMoment;
           },
