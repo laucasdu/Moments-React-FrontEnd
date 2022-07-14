@@ -8,15 +8,12 @@ import {
   ImageUrl,
   CtMoment,
   CtTxt,
-  CtImage,
   TxtTitle,
   TxtDescription,
-  TxtComment,
-  CtComment,
-  CtTxtComment,
   CtComments,
   TxtListComments,
-  TxtComments
+  TxtComments,
+  CtImage
 } from "./Moment.styled";
 
 
@@ -59,24 +56,24 @@ function Moment() {
 
     return (
       
-        <Container>
-        <CtMoment>
-        <CtImage>
-            <ImageUrl src={momentDetails.imgUrl} alt="momentfoto" />
-          </CtImage>
-          <CtTxt>
-            <TxtTitle>{momentDetails.title}</TxtTitle>
-            <TxtDescription>{momentDetails.description}</TxtDescription>
-          </CtTxt>
-        <CtComments>
-        <TxtListComments>Comments</TxtListComments>
-        {commentMoment.map((commentMoment, key) => (
-          <TxtComments key={key} commentMoment={commentMoment}>{commentMoment.comment}</TxtComments>
-        ))}
-              </CtComments>
-            </CtMoment>
-      </Container> 
-    );
-  }
+      <Container>
+      <CtMoment>
+      <CtImage>
+          <ImageUrl src={momentDetails.imgUrl} alt="momentfoto" />
+        </CtImage>
+        <CtTxt>
+          <TxtTitle>{momentDetails.title}</TxtTitle>
+          <TxtDescription>{momentDetails.description}</TxtDescription>
+        </CtTxt>
+      <CtComments>
+      <TxtListComments>Comments</TxtListComments>
+      {commentMoment.map((commentMoment, key) => (
+        <TxtComments key={key} commentMoment={commentMoment}>{commentMoment.comment}</TxtComments>
+      ))}
+            </CtComments>
+          </CtMoment>
+    </Container> 
+  );
+}
       
 export default Moment

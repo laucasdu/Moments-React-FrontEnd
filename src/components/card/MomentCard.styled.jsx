@@ -11,6 +11,8 @@ export const Anchor = styled.a`
 
 export const CtCard = styled.div`
   display: flex;
+  border-radius: 2%;
+  /* position: relative; */
   flex-direction: column;
   /* margin: 5%; */
   filter: drop-shadow(2px 1px 6px #7a8188 );
@@ -247,7 +249,7 @@ margin-right: 20%;
 
 export const UserName = styled.h5`
 width: 50%;
-margin-left: 10%;
+margin-left: 5%;
 
 `;
 

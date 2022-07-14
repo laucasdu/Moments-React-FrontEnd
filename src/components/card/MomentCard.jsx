@@ -34,9 +34,11 @@ function MomentCard({moment, deleteMoment}) {
     <CtCard>
       <CtUser>
       <User>
-        <UserPhoto src={moment.creator.userImg} alt={moment.creator.userName}></UserPhoto></User>
-        <CtUserName>
-        <UserName>{moment.creator.userName}</UserName> </CtUserName>
+        <UserPhoto src={moment.creator.userImg} alt={moment.creator.userName}></UserPhoto>
+      </User>
+      <CtUserName>
+        <UserName>{moment.creator.userName}</UserName> 
+      </CtUserName>
       </CtUser>
       <CtImage>
       <Link to = {`/moments/${moment.id}`}>
