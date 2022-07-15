@@ -11,7 +11,7 @@ export const Anchor = styled.a`
 
 export const CtCard = styled.div`
   display: flex;
-  border-radius: 2%;
+  /* border-radius: 5%; */
   /* position: relative; */
   flex-direction: column;
   /* margin: 5%; */
@@ -158,8 +158,6 @@ export const BtEdit = styled.button`
 `;
 
 
- 
-
 export const BtDelete = styled.button`
   color: #345226;
   background-color: transparent;
@@ -231,31 +229,48 @@ export const CtUser = styled.div`
   justify-content: center;
 `;
 
+export const User = styled.div`
+width: 50%;
+`;
+
 export const UserPhoto = styled.img`
   width: 100%;
   object-fit: cover;
 `;
 
-export const User = styled.div`
-width: 20%;
-`;
-
-
 export const CtUserName = styled.div`
-width: 50%;
-margin-right: 20%;
+width: 40%;
+margin-right: 40%;
 
 `;
 
 export const UserName = styled.h5`
-width: 50%;
+width: 40%;
 margin-left: 5%;
 
 `;
 
 export const Num = styled.h2`
-color: #345226;
+/* color: #072104; */
+color: #D5E0DC;
+
+top:71%;
+left:21%;
+position: fixed;
+text-shadow: 1px 2px 4px #072104;
+/* text-shadow: 1px 2px 4px #D5E0DC; */
+
+
 
 `;
 
+export const CtPunts = styled.div`
+width: 30%;
+`;
+
+export const Punts = styled.p`
+color: #345226;
+font-size: 25px;
+
+`;
 

@@ -6,7 +6,7 @@ export const CtMomentList = styled.div`
     grid-template-columns: 20% 20% 20% 20%;
     display: grid;
     gap: 4em;  
-    background-color: white;
+    background-color: #D5E0DC;
     
     
 @media only screen and (max-width:820px) {

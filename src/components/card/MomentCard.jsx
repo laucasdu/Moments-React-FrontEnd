@@ -21,7 +21,9 @@ import {
   UserName,
   User,
   Num,
-  CtUserName
+  CtUserName,
+  Punts,
+  CtPunts
 } from './MomentCard.styled';
 
 
@@ -39,6 +41,9 @@ function MomentCard({moment, deleteMoment}) {
       <CtUserName>
         <UserName>{moment.creator.userName}</UserName> 
       </CtUserName>
+      <CtPunts>
+        <Punts>...</Punts> 
+      </CtPunts>
       </CtUser>
       <CtImage>
       <Link to = {`/moments/${moment.id}`}>

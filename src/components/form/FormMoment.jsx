@@ -20,9 +20,7 @@ function FormMoment() {
   const {id} = useParams();
   const [newMoment, setNewMoment] = useState({});
   const [moments, setMoments] = useState([]);
-  // const [editActive, setEditActive] = useState(id);
-
-  let navigate = useNavigate();
+  const navigate = useNavigate();
 
 
   useEffect(() => {
@@ -44,7 +42,7 @@ function FormMoment() {
   });
 };
 
-//
+// Actualitza l'estat
 const onInputChange = (e) => {
       setNewMoment({ ...newMoment, [e.target.name]: e.target.value });
     };

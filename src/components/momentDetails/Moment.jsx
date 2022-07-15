@@ -7,13 +7,10 @@ import {
   Container,
   ImageUrl,
   CtMoment,
-  CtTxt,
-  TxtTitle,
-  TxtDescription,
   CtComments,
   TxtListComments,
   TxtComments,
-  CtImage
+  CtImage,
 } from "./Moment.styled";
 
 
@@ -36,6 +33,7 @@ function Moment() {
     [commentMoment])
   
 
+   // Funció que agafa un moment segons el seu id 
   const getMomentById = () => {
     momentServices.getMomentById(id).then((res) => {
       if(res){
@@ -47,6 +45,7 @@ function Moment() {
       
   }
 
+  // Funció que agafa un comentari segons el seu id 
   const getCommentByMomentid = () => {
     commentServices.getCommentsByMomentId(id).then((res) => {
       setCommentMoment(res);
@@ -61,17 +60,21 @@ function Moment() {
       <CtImage>
           <ImageUrl src={momentDetails.imgUrl} alt="momentfoto" />
         </CtImage>
-        <CtTxt>
+
+        {/* <CtTxt>
           <TxtTitle>{momentDetails.title}</TxtTitle>
           <TxtDescription>{momentDetails.description}</TxtDescription>
-        </CtTxt>
+        </CtTxt> */}
+      
       <CtComments>
-      <TxtListComments>Comments</TxtListComments>
+      <TxtListComments>COMMENTS</TxtListComments>
+
       {commentMoment.map((commentMoment, key) => (
         <TxtComments key={key} commentMoment={commentMoment}>{commentMoment.comment}</TxtComments>
       ))}
-            </CtComments>
-          </CtMoment>
+
+      </CtComments>
+      </CtMoment>
     </Container> 
   );
 }

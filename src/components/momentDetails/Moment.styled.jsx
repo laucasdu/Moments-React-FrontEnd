@@ -1,25 +1,26 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  padding-top: 10%;
-  display: flex;
-  justify-content: center;
-  background-color: white;
+  display : flex;
+    align-items: flex-end;
+    justify-content: center;
+
   @media (max-width: 450px) {
     padding-top: 30%;
   }
 `;
 
 export const CtMoment = styled.div`
-  /* border-style: solid; */
-  /* border-color: #1D0B29; */
   align-items: center;
   display: flex;
   border-radius: 0.2vw;
+  position: fixed;
+  top: 43%;
   padding: 2%;
   width: 60%;
   background-color: white;
   filter: drop-shadow(2px 1px 6px #7a8188 );
+
   @media (max-width: 450px) {
     flex-direction: column;
     align-items: center;
@@ -27,19 +28,13 @@ export const CtMoment = styled.div`
   }
 `;
 
-export const CtTxt = styled.div`
-  width: 50%;
-  height: 100%;
-  padding-left: 3vw;
-  @media (max-width: 450px) {
-    width: 100%;
-    margin-top: -8%;
-  }
-`;
 
 export const CtImage = styled.div`
-  width: 60%;
-  border-radius: 0.2vw;
+  width: 50%;
+  &:hover {
+    opacity:0.8;
+  }
+
   @media (max-width: 450px) {
     width: 100%;
   }
@@ -48,6 +43,11 @@ export const CtImage = styled.div`
 export const ImageUrl = styled.img`
   width: 100%;
   border-radius: 0.2vw;
+
+  &:hover {
+
+  }
+
   /* box-shadow: 0 0 8px grey; */
   @media (max-width: 450px) {
     width: 100%;
@@ -55,31 +55,31 @@ export const ImageUrl = styled.img`
   }
 `;
 
-export const TxtTitle = styled.h1`
-  color: #1D0B29;
-  border-bottom: 2px solid #1D0B29;
-`;
-
-export const TxtDescription = styled.p`
-  color: #1D0B29;
-  font-size: 1.1em;
-  @media (max-width: 450px) {
-    margin-top: -8%;
-  }
-`;
 
 export const CtComments = styled.div`
+  height: 337px;  
   display: flex;
-  flex-direction: row;
+  align-items: center;
+  flex-direction: column;
+  width: 50%;
+  border-radius : 8px;
+  position: relative;
 `;
 
 export const TxtListComments = styled.h3`
-align-items: center;
-justify-content: center;
+    font-size: 30px;
+    text-shadow: 1px 2px 2px #D5E0DC;
+    color:#98B5A4;
+    margin-top: -1%;
+    border-bottom: 4px solid #D5E0DC;
+
 `;
 
-export const TxtComments = styled.h5`
-  font-weight: normal;
-  padding-bottom: 5rem;
-`;
+export const TxtComments = styled.p`
+    margin-bottom: 2%;
+    color: #072104;
+    font-size: 22px;
+    align-items: right;
+
+  `;
 

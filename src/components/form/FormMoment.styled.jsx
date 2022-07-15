@@ -17,8 +17,8 @@ export const CtForm = styled.div`
 
 
 export const Form = styled.form`
-  width: 50%;
-  height: 55%;
+  width: 45%;
+  height: 45%;
   flex-direction: column;
   /* border-style: solid; */
   filter: drop-shadow(2px 1px 6px #7a8188 );
@@ -26,7 +26,7 @@ export const Form = styled.form`
   padding: 3%;
   border-radius: 0.2vw;
   position: fixed;
-  top: 20%;
+  top: 39%;
   background-color: white;
 
   @media (max-width: 450px) {
@@ -149,7 +149,7 @@ export const CtTxt = styled.h1`
   align-items: center;
   justify-content: center;
   width: 100%;
-  padding-top: 2%;
+  padding-top: 1%;
 `;
 
 export const CtTitlePrincipal = styled.div`
