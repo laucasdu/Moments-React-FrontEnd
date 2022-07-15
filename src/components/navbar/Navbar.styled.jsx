@@ -7,18 +7,16 @@ export const CtNavbar = styled.div`
   justify-content: space-between;
   background-color: #072104;
 
-
   @media screen and (max-width: 820px) {
-  /* height: 80px;
+  height: 250px;
   width: 100%;
   background-color: #072104;
-    */
+   
   }
 
   @media screen and (max-width: 390px) {
-    display: none;
-
-
+    height: 150px;
+    width: 100%;
   }
 `;
 
@@ -32,7 +30,6 @@ export const CtLogo = styled.div`
   }
 
   @media screen and (max-width: 390px) {
-    /* margin-bottom: 6%; */
   }
 `;
 
@@ -50,26 +47,12 @@ export const TxtLogo = styled.button`
   color:#072104;  
   cursor: pointer;
 
-
-/* 
-  color: #EAD9F6;
-  font-weight: 600;
-  &:hover,
-  :active,
-  :link,
-  :visited {
-    text-decoration: none;
-  } */
-
   @media screen and (max-width: 820px) {
-    height: 500px;
-    font-size: 5rem;
-    justify-content: center;
-    align-items: center;
+    display: none;
   }
 
   @media screen and (max-width: 390px){
-    margin-bottom: 6%;
+    display: none;
 
   }
 
@@ -178,9 +161,22 @@ export const CtLogoCentral = styled.div`
 
 `;
 
-
 export const LogoAdventure = styled.img`
 margin-left: 13%;
+
+@media screen and (max-width: 820px) {
+  /* top:-10%;
+  left:5%;
+  position: fixed; */
+  margin-top: -25%;
+  margin-left: -21%;
+  }
+
+  @media screen and (max-width: 390px) {
+    width: 100%;
+    margin-left: -16%;
+
+  }
 
 `;
 

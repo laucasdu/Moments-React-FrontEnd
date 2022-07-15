@@ -129,7 +129,7 @@ const resetInputsForm = () => {
                   <CtButton>
                     {id   //Condició per fer que canvi de botó segons el que volem fer
                     ? <BtEdit type="submit">EDIT</BtEdit>
-                    : <BtEdit type="submit">CREATE</BtEdit>
+                    : <BtEdit type="submit">SUBMIT</BtEdit>
                     } 
                     <BtCancel type="reset" onClick={handleReset}>CANCEL</BtCancel>
                     {/* <BtCancel type="reset" onClick={resetInputsForm}>CANCEL</BtCancel> */}

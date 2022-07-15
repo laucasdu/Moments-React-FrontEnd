@@ -1,6 +1,7 @@
 import React from 'react'
-import  Moment  from '../../components/momentDetails/Moment'
 import NavBar from '../../components/navbar/NavBar'
+import  Moment  from '../../components/momentDetails/Moment'
+import NavbarMobil from '../../components/navbarmobil/NavbarMobil'
 
 function Details() {
 
@@ -10,6 +11,10 @@ function Details() {
     <>
    <NavBar/>
    <Moment/>
+   
+   <NavbarMobil/>
+
+
 
    </>
 

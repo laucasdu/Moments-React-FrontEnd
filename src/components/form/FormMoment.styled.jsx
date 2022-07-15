@@ -6,18 +6,17 @@ export const CtForm = styled.div`
   align-items: center; 
   flex-direction: row;
   
-  @media only screen and (max-width:820px) {
-    display: none;
-
+@media only screen and (max-width:820px) {
 }
+
 @media only screen and (max-width:450px) {
-    display: none;
+
 } 
+
 `;
 
-
 export const Form = styled.form`
-  width: 45%;
+  width: 55%;
   height: 45%;
   flex-direction: column;
   /* border-style: solid; */
@@ -26,16 +25,26 @@ export const Form = styled.form`
   padding: 3%;
   border-radius: 0.2vw;
   position: fixed;
-  top: 39%;
+  top: 40%;
   background-color: white;
 
-  @media (max-width: 450px) {
-    height: 300px;
+  @media only screen and (max-width:820px) {
+    top:32%;
+    width: 80%;
+    height: 48%;
   }
+
+@media only screen and (max-width:450px) {
+    top:22%;
+    width: 80%;
+    height: 60%;
+  } 
+
 `;
 
 export const Input = styled.input`
   width: 100%;
+  background-color: #D5E0DC;  
   padding: 12px 20px;
   margin: 8px 0;
   box-sizing: border-box;
@@ -45,13 +54,13 @@ export const Input = styled.input`
   @media (max-width: 450px) {
     padding: 5%;
     margin-bottom: 5%;
-    width: 90%;
     font-size: 1.2em;
   }
 `;
 
 export const InputDescription = styled.textarea`
   resize: none;
+  background-color: #D5E0DC;  
   border-radius: 0.2vw;
   width: 100%;
   padding: 12px 20px;
@@ -63,7 +72,6 @@ export const InputDescription = styled.textarea`
   @media (max-width: 450px) {
     padding: 5%;
     margin-bottom: 5%;
-    width: 90%;
     font-size: 1.2em;
   }
 `;
@@ -82,17 +90,27 @@ export const BtEdit = styled.button`
   color:#072104;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   border-radius: 0.2vw;
-
-
   &:hover {
     color: #1D0B29;
   }
-  @media (max-width: 450px) {
-    position: absolute;
-    top: 85%;
-    left: 45%;
-    font-size: 1.2em;
+
+  
+
+  @media only screen and (max-width:820px) {
+  font-size: 20px;
+  width: 50%;
+  font-size: 19px;
+}
+
+
+@media (max-width: 420px) {
+   
+  font-size: 20px;
+  width: 45%;
+  font-size: 19px;
+
   }
+
 `;
 
 export const BtCancel = styled.button`
@@ -110,16 +128,22 @@ export const BtCancel = styled.button`
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   border-radius: 0.2vw;
 
-
-
   &:hover {
     color: #1D0B29;
   }
-  @media (max-width: 450px) {
-    position: absolute;
-    top: 85%;
-    left: 45%;
-    font-size: 1.2em;
+
+
+  @media only screen and (max-width:820px) {
+    font-size: 20px;
+  width: 50%;
+  font-size: 19px;
+}
+
+  @media (max-width: 420px) {
+    font-size: 20px;
+    width: 45%;
+  font-size: 19px;
+
   }
 `;
 
@@ -128,6 +152,7 @@ export const CtButton = styled.div`
  display: flex;
  flex-direction: row;
  width: 100%;
+
  color:#072104;
 
   &:hover {
@@ -137,10 +162,10 @@ export const CtButton = styled.div`
   @media (max-width: 450px) {
     position: absolute;
     top: 85%;
-    left: 45%;
-    font-size: 1.2em;
+    margin-top: 3%;
   }
 `;
+
 
 export const CtTxt = styled.h1`
   color:black;
@@ -150,20 +175,54 @@ export const CtTxt = styled.h1`
   justify-content: center;
   width: 100%;
   padding-top: 1%;
+
+  @media only screen and (max-width:820px) {
+  font-size: 20px;
+  }
+
+@media (max-width: 450px) {
+  font-size: 12px;
+  }
+
 `;
 
 export const CtTitlePrincipal = styled.div`
   display: flex;
   background-color: #98B5A4;
   border-radius: 0.2vw;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+
+  @media only screen and (max-width:820px) {
+  height: 20%;
+}
+
+@media only screen and (max-width:450px) {
+  align-items: center;
+  margin-right: 20%;
+
+} 
 
 `;
 
 export const TxtPrincipal = styled.h1`
   color:#072104;
-  padding-left: 45%;
   font-size: 30px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+  @media only screen and (max-width:820px) {
+  height: 20%;
+  font-size: 40px;
+
+}
+
+@media only screen and (max-width:450px) {
+  align-items: center;
+  margin-right: 2%;
+  font-size: 30px;
+
+} 
 
 `;
 

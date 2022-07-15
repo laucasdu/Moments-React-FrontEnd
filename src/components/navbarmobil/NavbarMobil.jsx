@@ -21,7 +21,7 @@ function NavbarMobil() {
           </Link> 
           
           <Link to="/form">
-              <BtCreate><i className="fa-solid fa-circle-plus fa-2xl"></i></BtCreate>
+              <BtCreate><i className="fa-solid fa-square-plus fa-2xl"></i></BtCreate>
           </Link>     
           <Link to="">
               <BtNavbar><i className="fa-solid fa-heart fa-2xl"></i></BtNavbar>

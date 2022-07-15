@@ -1,12 +1,21 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  display : flex;
+    display : flex;
     align-items: flex-end;
     justify-content: center;
 
-  @media (max-width: 450px) {
-    padding-top: 30%;
+  @media screen and (max-width: 820px) {
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  }
+  @media screen and (max-width: 415px) {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 0px;
+    padding-top: 25%;
+    /* height: 100vh; */
   }
 `;
 
@@ -21,22 +30,38 @@ export const CtMoment = styled.div`
   background-color: white;
   filter: drop-shadow(2px 1px 6px #7a8188 );
 
-  @media (max-width: 450px) {
+  @media screen and (max-width: 820px) {
     flex-direction: column;
     align-items: center;
-    margin-bottom: 25%;
+    width: 80%;
+    top: 23%;
+    height: 60%;
+  }
+
+  @media screen and (max-width: 415px) {
+    width: 80%;
+    height: 60vh;
+    top: 22%;
   }
 `;
 
 
 export const CtImage = styled.div`
-  width: 50%;
+  width: 100%;
   &:hover {
     opacity:0.8;
   }
 
+  @media screen and (max-width: 820px) {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    top: 29%;
+  }
+
   @media (max-width: 450px) {
     width: 100%;
+
   }
 `;
 
@@ -44,9 +69,6 @@ export const ImageUrl = styled.img`
   width: 100%;
   border-radius: 0.2vw;
 
-  &:hover {
-
-  }
 
   /* box-shadow: 0 0 8px grey; */
   @media (max-width: 450px) {
@@ -64,6 +86,22 @@ export const CtComments = styled.div`
   width: 50%;
   border-radius : 8px;
   position: relative;
+  width: 100%;
+
+
+  @media screen and (max-width: 820px) {
+    margin-top: -2%;
+    width: 100%;
+
+  }
+
+  @media screen and (max-width: 415px) {
+    margin-top: 5%;
+  }
+
+
+
+
 `;
 
 export const TxtListComments = styled.h3`
@@ -73,6 +111,17 @@ export const TxtListComments = styled.h3`
     margin-top: -1%;
     border-bottom: 4px solid #D5E0DC;
 
+
+    @media screen and (max-width: 820px) {
+    margin-top: 5%;
+    width: 100%;
+
+  }
+
+  @media screen and (max-width: 415px) {
+    margin-top: 5%;
+  }
+
 `;
 
 export const TxtComments = styled.p`
@@ -80,6 +129,15 @@ export const TxtComments = styled.p`
     color: #072104;
     font-size: 22px;
     align-items: right;
+
+    @media screen and (max-width: 820px) {
+    margin-top: 5%;
+    width: 100%;
+  }
+
+  @media screen and (max-width: 415px) {
+    margin-top: 5%;
+  }
 
   `;
 
