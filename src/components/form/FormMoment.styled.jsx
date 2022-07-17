@@ -5,6 +5,7 @@ export const CtForm = styled.div`
   justify-content: center;
   align-items: center; 
   flex-direction: row;
+
   
 @media only screen and (max-width:820px) {
 }
@@ -16,22 +17,24 @@ export const CtForm = styled.div`
 `;
 
 export const Form = styled.form`
-  width: 55%;
-  height: 45%;
+  width: 40%;
+  height: 45vh;
   flex-direction: column;
   /* border-style: solid; */
   filter: drop-shadow(2px 1px 6px #7a8188 );
   /* border-color: #1D0B29; */
-  padding: 3%;
+  padding: 2%;
   border-radius: 0.2vw;
   position: fixed;
-  top: 40%;
+  top: 43%;
+
   background-color: white;
 
   @media only screen and (max-width:820px) {
     top:32%;
-    width: 80%;
-    height: 48%;
+    width: 90%;
+    height: 42%;
+    padding-top: 5%;
   }
 
 @media only screen and (max-width:450px) {
@@ -46,7 +49,6 @@ export const Input = styled.input`
   width: 100%;
   background-color: #D5E0DC;  
   padding: 12px 20px;
-  margin: 8px 0;
   box-sizing: border-box;
   font-family: 'Courier New', Courier, monospace;
   font-weight: 500;
@@ -64,7 +66,6 @@ export const InputDescription = styled.textarea`
   border-radius: 0.2vw;
   width: 100%;
   padding: 12px 20px;
-  margin: 8px 0;
   font-weight: 500;
   box-sizing: border-box;
   font-family: 'Courier New', Courier, monospace;
