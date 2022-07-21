@@ -59,7 +59,6 @@ export const Imatge = styled.img`
 
   @media screen and (max-width: 820px) {
     
-    
   }
 
   @media screen and (max-width: 390px) {
