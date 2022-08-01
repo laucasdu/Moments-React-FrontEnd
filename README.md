@@ -38,6 +38,7 @@ Also, it is using react-router-dom v.6 to navigate between pages. The applicatio
 - CSS 3
 - JS ES6 VANILLA
 - REACT
+- AXIOS
 
 ## INSTALLATION
 - Required React v.18.2.0
