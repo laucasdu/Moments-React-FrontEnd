@@ -7,6 +7,7 @@ export const CtNavbar = styled.div`
   justify-content: space-between;
   background-color: #072104;
 
+
   @media screen and (max-width: 820px) {
   height: 250px;
   width: 100%;
@@ -64,16 +65,7 @@ export const CtInfo = styled.div`
     flex-direction: row;
     margin-top:2%;
     margin-right: 2%;
-    /* flex-direction: column;
-    width: 20%;
-    flex-direction: row;
-    font-size: 25px;
-    margin-top: 45px;
-    justify-content: space-around;
-    font-size: 25px;
-    text-decoration: none; */
-    /* margin-top: 5px; */
-    /* margin-right: 70px; */
+    
 
 `;
 
@@ -112,7 +104,6 @@ export const TxtNew = styled.button`
   font-size: 17px;
   border-radius: 0.1vw;
   background-color: #98B5A4;
-  color:#072104;  
   cursor: pointer;
 
 

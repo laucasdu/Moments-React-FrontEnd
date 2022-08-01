@@ -48,6 +48,7 @@ export const CtMoment = styled.div`
 
 export const CtImage = styled.div`
   width: 100%;
+  
   &:hover {
     opacity:0.8;
   }
@@ -67,6 +68,7 @@ export const CtImage = styled.div`
 
 export const ImageUrl = styled.img`
   width: 100%;
+  margin-left: 50px;
   border-radius: 0.2vw;
 
 

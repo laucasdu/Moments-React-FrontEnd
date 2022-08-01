@@ -6,7 +6,6 @@ import {
   CtLogo,
   TxtLogo, 
   CtInfo,
-  TxtHome,
   TxtNew,
   TxtRegistrate,
   CtLogoCentral,
@@ -21,7 +20,6 @@ function NavBar() {
 
     <>
         <CtNavbar>
-
           <CtLogo>
           <Link to="/">
               {/* <i className="fa-solid fa-house fa-2xl"></i> */}
