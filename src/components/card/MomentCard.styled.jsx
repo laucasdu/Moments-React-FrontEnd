@@ -329,3 +329,11 @@ font-size: 25px;
 
 `;
 
+
+export const NumHeart = styled.h2`
+color: red;
+top:69%;
+left:10%;
+position: fixed;
+text-shadow: 1px 2px 4px #072104;
+`;

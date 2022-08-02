@@ -23,11 +23,12 @@ import {
   Num,
   CtUserName,
   Punts,
-  CtPunts
+  CtPunts,
+  NumHeart
 } from './MomentCard.styled';
 
 
-function MomentCard({moment, deleteMoment}) {
+function MomentCard({moment, deleteMoment, like}) {
 
   // console.log(moment)
 
@@ -53,16 +54,16 @@ function MomentCard({moment, deleteMoment}) {
       <CtCardInfo>
         
         <CtIcons>
+          <NumHeart>{moment.likesCount}</NumHeart>
 
-          <BtFav><i className="fa-regular fa-thumbs-up fa-2x fa-lg"></i></BtFav>
+          <BtFav onClick={() => like(like.id)}>
+          <i className="fa-solid fa-heart"></i></BtFav>
           <Num>{moment.commentCount}</Num>
 
           <BtComment>
 
           <Anchor href={`/moments/${moment.id}`}><span>
           <i className="fa-regular fa-comment-dots fa-2x fa-lg"></i></span></Anchor></BtComment>
-
-          {/* <BtComment><i className="fa-regular fa-comment-dots fa-2x fa-lg"></i></BtComment> */}
         </CtIcons>
         <CtIconsModify>
          
