@@ -8,10 +8,6 @@ MOMENT APP
 
 ***
 
-## Link
-
-https://laucasdu.github.io/Moments-React-Front/
-
 ## BRIEFING
 
 Web application that allows you to view a list of images of different destinations and situations.

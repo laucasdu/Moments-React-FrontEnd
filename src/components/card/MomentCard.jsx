@@ -28,7 +28,7 @@ import {
 } from './MomentCard.styled';
 
 
-function MomentCard({moment, deleteMoment, like}) {
+function MomentCard({moment, deleteMoment, likes}) {
 
   // console.log(moment)
 
@@ -52,12 +52,26 @@ function MomentCard({moment, deleteMoment, like}) {
           </Link>
       </CtImage>
       <CtCardInfo>
-        
-        <CtIcons>
-          <NumHeart>{moment.likesCount}</NumHeart>
+                  {/* <i className= {moment.like ? "fa-solid fa-heart" : "fa-regular fa-heart"}></i></BtFav> */}
 
-          <BtFav onClick={() => like(like.id)}>
-          <i className="fa-solid fa-heart"></i></BtFav>
+        <CtIcons>
+
+
+          {moment.likes ? (
+            <>
+          <NumHeart>{moment.likesCount}</NumHeart>
+          <BtFav onClick={() => likes(moment)}>
+          <i className="fa-solid fa-heart fa-2xl"></i></BtFav>
+          </>
+          ) : (
+           <>
+          <NumHeart>{moment.likesCount}</NumHeart>
+          <BtFav onClick={() => likes(moment)}>
+          <i className="fa-regular fa-heart fa-2xl"></i></BtFav>
+
+          </>
+            )}
+
           <Num>{moment.commentCount}</Num>
 
           <BtComment>

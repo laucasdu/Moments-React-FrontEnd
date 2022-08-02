@@ -64,14 +64,36 @@ function MomentsList() {
       };
 
 
+      // const likes = (moment) => {
+      //   console.log(moment)
+
+      //   let data = {loverId:1, momentId:moment.id}
+
+      //   likeServices.likes(data).then((res) => {
+      //     if (!res) return;
+      //       getAllMoments();
+      //       window.confirm(
+      //         `Hello?`
+      //       );
+      //   });
+      //   getAllMoments();
+      // };
+    
+
+
+
       const likes = (data) => {
         likeServices.likes(data.id).then((res) => {
-          if (!res) return;
+          if (!res) 
+          window.alert("like is true");
           getAllMoments();
+          window.alert("like is false");
+          return;
+
         });
         getAllMoments();
       };
-    
+
 
   return (
 
