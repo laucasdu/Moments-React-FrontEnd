@@ -15,9 +15,10 @@ function Router() {
                 <Route path='/' element={<App />} />
                 <Route path='/moments' element={<Home />} />
                 <Route path="/moments/:id" element={<Details />} />
-                <Route path="/logIn" element={<LogInPage />} />
                 <Route path="/form" element={<FormPage />} />
                 <Route path="/form/:id" element={<FormPage />} />
+                <Route path="/login" element={<LogInPage />} />
+
         </Routes>
     </BrowserRouter>
 

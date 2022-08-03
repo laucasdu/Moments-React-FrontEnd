@@ -57,17 +57,17 @@ function MomentCard({moment, deleteMoment, likes}) {
         <CtIcons>
 
 
-          {moment.likes ? (
+          {moment.liked ? (
             <>
           <NumHeart>{moment.likesCount}</NumHeart>
-          <BtFav onClick={() => likes(moment)}>
-          <i className="fa-solid fa-heart fa-2xl"></i></BtFav>
+          <BtFav onClick={() => likes(moment.id)}>
+          <i className="fa-solid fa-heart"></i></BtFav>
           </>
           ) : (
            <>
           <NumHeart>{moment.likesCount}</NumHeart>
-          <BtFav onClick={() => likes(moment)}>
-          <i className="fa-regular fa-heart fa-2xl"></i></BtFav>
+          <BtFav onClick={() => likes(moment.id)}>
+          <i className="fa-regular fa-heart"></i></BtFav>
 
           </>
             )}

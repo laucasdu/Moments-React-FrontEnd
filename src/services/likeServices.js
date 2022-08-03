@@ -6,7 +6,7 @@ export const likeServices = {
     
     likes(id) {
         const likes = axios
-          .post(baseURL + "/likes", {momentId: id, userId: 2})
+          .post(baseURL + "/likes", {momentId: id, userId: 1})
           .then((res) => {
             return res.data;
           })

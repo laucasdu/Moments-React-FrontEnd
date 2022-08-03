@@ -82,13 +82,13 @@ function MomentsList() {
 
 
 
-      const likes = (data) => {
-        likeServices.likes(data.id).then((res) => {
-          if (!res) 
-          window.alert("like is true");
+      const likes = (id) => {
+        likeServices.likes(id).then((res) => {
+          if (!res) return;
+          // window.alert("like is true");
           getAllMoments();
-          window.alert("like is false");
-          return;
+          // window.alert("like is false");
+          // return;
 
         });
         getAllMoments();
