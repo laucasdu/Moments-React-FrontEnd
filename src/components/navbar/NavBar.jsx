@@ -33,21 +33,20 @@ function NavBar() {
 
 
         <CtInfo>
-        {/* <Link to="/"> */}
-              {/* <i className="fa-solid fa-house fa-2xl"></i> */}
-              {/* <TxtHome>HOME</TxtHome> */}
-          {/* </Link> */}
 
           <Link to="/form">
-              {/* <i className="fa-solid fa-circle-plus fa-2xl"></i> */}
-              <TxtNew>CREATE</TxtNew>
+              <TxtNew>NEW</TxtNew>
 
           </Link>        
 
           <Link to="/logIn">
-              {/* <i className="fa-solid fa-user fa-2xl"></i> */}
-              <TxtRegistrate>REGISTRATE</TxtRegistrate>
+              <TxtRegistrate>LOG IN</TxtRegistrate>
           </Link>
+
+          <Link to="/logIn">
+              <TxtRegistrate>SIGN UP</TxtRegistrate>
+          </Link>
+
           </CtInfo>
           </CtNavbar>
     </>

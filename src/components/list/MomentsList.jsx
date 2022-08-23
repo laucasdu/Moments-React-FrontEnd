@@ -3,7 +3,6 @@ import MomentCard from '../card/MomentCard';
 import { momentServices} from '../../services/momentServices'
 import { CtMomentList } from './MomentsList.styled'
 import Search from '../search/Search';
-import NavBar from '../navbar/NavBar';
 import { likeServices } from '../../services/likeServices';
 //import data from "../../assets/data/dbAxios.json"
 

@@ -10,12 +10,21 @@ export const authService = {
         return auth;
     },
 
-    registrer(req){
+    signup(req){
         const auth = axios.post(`${baseURL}/auth/signup`, req)
         .then(res => {return res.data});
         return auth;
 
-    }
+    },
+
 }
+
+
+
+
+
+
+
+
     
    

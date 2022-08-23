@@ -1,77 +1,121 @@
-import React, { useState } from 'react'
+import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import {authService} from '../../services/authService';
-import { BtCancel, BtEdit, CtButton, CtForm, CtTitlePrincipal, CtTxt, Form, Input, InputDescription, TxtPrincipal } from './Login.styled';
+import { localAuthService } from '../../services/localAuthService';
+import { 
+  BtEdit, 
+  CtButton, 
+  CtForm, 
+  CtTitlePrincipal, 
+  CtTxt, 
+  Form, 
+  Input, 
+  TxtPrincipal } 
+  from './Login.styled';
+
 
 function Login() {
+
+    const navigate = useNavigate();
     const [userData, setUserData] = useState({
         username:"",
         email:"",
         password:"",
     });
-  
 
-const registrer = () => {
-    authService.registrer(userData).then(res =>{
+
+const signup = () => {
+    localAuthService.deleteAuthUser();
+    authService.signup(userData).then((res) => {
         console.log(res);
+      resetInputs();
+      login();
+
+
     })
-}
+
+
+    // .catch((err) => alert(err.response.data.message));
+
+};
 
 const login = () => {
-    delete userData["email"];
-    authService.login(userData).then(res =>{
+    authService.login(userData).then((res) =>{
         console.log(res); 
-  })
-} 
+        
+        const authUser = {
+            token: res.accessToken,
+            username: res.username,
+            id: res.id,
+          };
+          localAuthService.saveAuthUser(authUser);
+          navigate('/', {replace: true});
 
 
-    function onInputChange (e) {
+    })
+    resetInputs();
+
+}
+
+    const handleInput = (e) => {
       let name = e.target.name;
-        let value = e.target.value;
+      let value = e.target.value;
         setUserData({...userData, [name]: value});
-    }
-
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        console.log(userData);
-        e.target.id == "login" ? login() : registrer();
     };
 
-console.log("hola")
+
+    const loginSubmit = (e) => {
+        e.preventDefault();
+        console.log(userData);
+        e.target.id === "login" ? login() : signup();
+    };
+      
+  //Funció que serveix per buidar el formulari
+  const resetInputs = () => {
+    setUserData({
+      username: "",
+      email: "",
+      password: "",
+    });
+  };
+
   return (
     <CtForm>
-    <Form>
+    <Form onSubmit={loginSubmit}>
       <CtTitlePrincipal> 
     <TxtPrincipal>FORM</TxtPrincipal>
     </CtTitlePrincipal>
-      <CtTxt>User</CtTxt>
+      <CtTxt>Username</CtTxt>
           <Input
-            onChange={(e)=>{onInputChange(e)}}
+            onChange={handleInput}
             value={userData.username}
             name="username"
             type="text"
             aria-label="user username"
             placeholder="User username"
           />
-        <CtTxt>Url</CtTxt>
+        
+        <CtTxt>E-mail</CtTxt>
           <Input
-            onChange={(e)=>{onInputChange(e)}}
+            onChange={handleInput}
             value={userData.email}
             name="email"
             type="email"
             aria-label="email"
             placeholder="User email"
             />
-            <CtTxt>Passwork</CtTxt>
-          <InputDescription
-            onChange={(e)=>{onInputChange(e)}}
+            <CtTxt>Password</CtTxt>
+          <Input
+            onChange={handleInput}
             value={userData.password}
             name="password"
             type="password"
-            placeholder="User passwork"
+            placeholder="User password"
             />
+
             <CtButton>
-             <BtEdit type="submit" id="login" onClick={handleSubmit}>LOGIN</BtEdit>
-             <BtEdit type="submit" id="registrer" onClick={handleSubmit} >REGISTRER</BtEdit>
+              <BtEdit type="submit" id="login" onClick={loginSubmit}>LOGIN</BtEdit>
+              <BtEdit type="submit" id="registrer" onClick={loginSubmit} >REGISTRER</BtEdit>
              
 
             </CtButton>
