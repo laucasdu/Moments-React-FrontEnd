@@ -27,7 +27,7 @@ export const CtMomentList = styled.div`
    @media screen and (max-width: 1085px) {
     grid-template-columns: 30% 30% 30%;
     justify-items: center;
-    background-color: white;
+
     /* height: 100vh; */
   }
 
@@ -36,14 +36,12 @@ export const CtMomentList = styled.div`
     justify-items: center;
     height: auto;
     gap: 0em;  
-    background-color: white;
   }
 
   @media screen and (max-width: 490px) {
     grid-template-columns: 90%;
     justify-items: center;
     height: auto;
-    background-color: white;
   }
   
 `;

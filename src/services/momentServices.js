@@ -1,17 +1,29 @@
 import axios from "axios";
+import { localAuthService } from "./localAuthService";
 
 // let baseURL = "http://localhost:5000";
 
-let baseURL = "http://localhost:8080";
+// let baseURL = "http://localhost:8080";
 
 // let baseURL = "https://62866d7696bccbf32d75019d.mockapi.io/";
+
+axios.defaults.baseURL = "http://localhost:8080";
+axios.defaults.headers.post["Content-Type"] = "application/json";
+axios.defaults.headers.post["Accept"] = "application/json";
+axios.defaults.withCredentials = false;
+axios.interceptors.request.use(function (config) {
+  //const token = localStorage.getItem("auth".token);
+  const token = localAuthService.getAuthUser().token;
+  config.headers.Authorization = token ? `Bearer ${token}` : "";
+  return config;
+});
 
 
 export const momentServices = {
 
 
     getAllMoments() {
-        const moment = axios.get(baseURL + "/moments").then((res) => {
+        const moment = axios.get("/moments").then((res) => {
         return res.data;
     });
 
@@ -21,21 +33,21 @@ export const momentServices = {
     getMomentById(id) {
       console.log(id)
         const moments = axios
-          .get(baseURL + "/moments/" + id)
+          .get("/moments/" + id)
           .then((res) => res.data);
         return moments;
       },
 
       updateMoment(id, newMoment) {
           const moments = axios
-            .put(baseURL + "/moments/" + id, newMoment)
+            .put("/moments/" + id, newMoment)
             .then((res) => res.data);
           return moments;
         },
 
        deleteMoment(id) {
           const deletedMoment = axios
-          .delete(baseURL + "/moments/" + id)
+          .delete("/moments/" + id)
           .then((res) => res.data);
               return deletedMoment;
       },
@@ -43,7 +55,7 @@ export const momentServices = {
       createMoment(data) {
 
           const createNewMoment = axios
-          .post(baseURL + "/moments/", data)
+          .post("/moments/", data)
 
           // .post(baseURL + "/moments/", {...data,userId:1})
           .then((res) => res.data);
@@ -52,7 +64,7 @@ export const momentServices = {
 
 
         searchMoment(search) {
-          const moments = axios.get(`${baseURL}/moments?search=${search}`).then((res) => {
+          const moments = axios.get(`/moments?search=${search}`).then((res) => {
             return res.data;
           });
           return moments;

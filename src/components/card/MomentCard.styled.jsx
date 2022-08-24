@@ -84,13 +84,14 @@ export const BtFav = styled.button`
   font-size: 22px;
   margin-left: 6%;
   border: none;
-  color: #345226;
+  /* color: #345226; */
+  color:${ ({isLiked}) => isLiked ? "red" : "#345226"};
   margin-right: 2%;
 
-  cursor: pointer;
+  /* cursor: pointer;
   &:hover {
     color: #98B5A4;
-  }
+  } */
 
 
   @media screen and (max-width: 820px) {

@@ -10,6 +10,7 @@ function MomentsList() {
 
   const [moments, setMoments] = useState([]);
   const [search, setSearch] = useState("");
+  const [isLiked, setIsLiked] = useState(false);
 
 
   // useEffect(()=> {
@@ -83,13 +84,14 @@ function MomentsList() {
 
       const likes = (id) => {
         likeServices.likes(id).then((res) => {
-          if (!res) return;
+          setIsLiked(true) 
           // window.alert("like is true");
           getAllMoments();
           // window.alert("like is false");
           // return;
 
         });
+        setIsLiked(false);
         getAllMoments();
       };
 
@@ -109,6 +111,7 @@ function MomentsList() {
               likes={likes} 
               moment={moment}
               deleteMoment={deleteMoment}
+              isLiked={isLiked}
 
               />
       

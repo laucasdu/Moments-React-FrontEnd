@@ -18,6 +18,8 @@ function Router() {
                 <Route path="/form" element={<FormPage />} />
                 <Route path="/form/:id" element={<FormPage />} />
                 <Route path="/login" element={<LogInPage />} />
+                <Route path="/signup" element={<LogInPage />} />
+
 
         </Routes>
     </BrowserRouter>

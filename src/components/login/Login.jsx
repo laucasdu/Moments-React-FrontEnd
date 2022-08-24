@@ -1,5 +1,6 @@
+import { useEffect } from 'react';
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import {authService} from '../../services/authService';
 import { localAuthService } from '../../services/localAuthService';
 import { 
@@ -17,12 +18,16 @@ import {
 function Login() {
 
     const navigate = useNavigate();
+    const location = useLocation().pathname
+    
     const [userData, setUserData] = useState({
         username:"",
         email:"",
         password:"",
     });
 
+      useEffect(() => {
+      },[location])
 
 const signup = () => {
     localAuthService.deleteAuthUser();
@@ -30,8 +35,6 @@ const signup = () => {
         console.log(res);
       resetInputs();
       login();
-
-
     })
 
 
@@ -94,8 +97,8 @@ const login = () => {
             aria-label="user username"
             placeholder="User username"
           />
-        
-        <CtTxt>E-mail</CtTxt>
+        {location === "/signup"&&
+         <><CtTxt>E-mail</CtTxt>
           <Input
             onChange={handleInput}
             value={userData.email}
@@ -104,6 +107,7 @@ const login = () => {
             aria-label="email"
             placeholder="User email"
             />
+            </>}
             <CtTxt>Password</CtTxt>
           <Input
             onChange={handleInput}
@@ -113,11 +117,11 @@ const login = () => {
             placeholder="User password"
             />
 
-            <CtButton>
+            <CtButton> 
+            {location === "/login" ?
               <BtEdit type="submit" id="login" onClick={loginSubmit}>LOGIN</BtEdit>
-              <BtEdit type="submit" id="registrer" onClick={loginSubmit} >REGISTRER</BtEdit>
-             
-
+              :<BtEdit type="submit" id="registrer" onClick={loginSubmit} >REGISTRER</BtEdit>
+            }
             </CtButton>
         </Form>
         </CtForm>

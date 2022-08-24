@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import logo from '../../assets/img/logo.png';
+import { localAuthService } from "../../services/localAuthService";
 
 import { 
   CtNavbar, 
@@ -39,13 +40,15 @@ function NavBar() {
 
           </Link>        
 
-          <Link to="/logIn">
+          <Link to="/login">
               <TxtRegistrate>LOG IN</TxtRegistrate>
           </Link>
 
-          <Link to="/logIn">
+          <Link to="/signup">
               <TxtRegistrate>SIGN UP</TxtRegistrate>
           </Link>
+
+              <TxtRegistrate onClick={localAuthService.deleteAuthUser}>LOG OUT</TxtRegistrate>
 
           </CtInfo>
           </CtNavbar>

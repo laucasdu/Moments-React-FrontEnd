@@ -25,6 +25,7 @@ export const localAuthService = {
 
       deleteAuthUser() {
         localStorage.removeItem("auth")
+        window.location.assign("/")
       }
 
   };
