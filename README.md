@@ -38,10 +38,10 @@ Also, it is using react-router-dom v.6 to navigate between pages. The applicatio
 - HTML 5
 - CSS 3
 - JS ES6 VANILLA
-- REACT
-- AXIOS
-- REACT ROUTER DOM
-- POSTMAN
+- React
+- Axios
+- React router DOM 
+- Postman
 
 ## INSTALLATION
 
