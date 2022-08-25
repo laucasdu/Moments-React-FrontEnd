@@ -45,6 +45,8 @@ Also, it is using react-router-dom v.6 to navigate between pages. The applicatio
 
 ## INSTALLATION
 
+This project was bootstrapped with Create React App therefore requires node.js and npm. Once you've verified node is installed in your directory take the following steps:
+
 1. Clone the repository with the following command:  
 ```
 git clone https://github.com/laucasdu/Moments-React-Front.git
@@ -56,16 +58,10 @@ git clone https://github.com/laucasdu/Moments-React-Front.git
 npm install
 ```
 
-3. Then, start the front-end with `npm start`, this command will start the front-end in http://localhost:3000.
-
-4. For the correct functioning of the front-end, you must also clone the back-end repository:
+3. For the correct functioning of the front-end, you must also clone the back-end repository:
 ```
 git clone https://github.com/laucasdu/Moments-Java-Back.git
 ```
 
-5. Once cloned, run the following command again, but this time in the back repository.
 
-```
-npm install
-```
 
