@@ -27,7 +27,7 @@ function NavbarMobil() {
               <BtNavbar><i className="fa-solid fa-heart fa-2xl"></i></BtNavbar>
           </Link> 
 
-          <Link to="/logIn">
+          <Link to="/login">
               <BtNavbar><i className="fa-solid fa-user fa-2xl"></i></BtNavbar>
           </Link>
         </CtIconos>

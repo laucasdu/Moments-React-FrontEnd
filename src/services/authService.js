@@ -5,7 +5,7 @@ let baseURL = "http://localhost:8080";
 export const authService = {
 
     login(req){
-        const auth = axios.post(`${baseURL}/auth/signin`, req)
+        const auth = axios.post(`${baseURL}/auth/login`, req)
         .then(res => {return res.data});
         return auth;
     },

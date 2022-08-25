@@ -4,7 +4,7 @@ import { useLocation, useNavigate } from 'react-router-dom';
 import {authService} from '../../services/authService';
 import { localAuthService } from '../../services/localAuthService';
 import { 
-  BtEdit, 
+  BtForm, 
   CtButton, 
   CtForm, 
   CtTitlePrincipal, 
@@ -30,11 +30,12 @@ function Login() {
       },[location])
 
 const signup = () => {
+  console.log(userData);
     localAuthService.deleteAuthUser();
     authService.signup(userData).then((res) => {
         console.log(res);
-      resetInputs();
       login();
+
     })
 
 
@@ -53,10 +54,8 @@ const login = () => {
           };
           localAuthService.saveAuthUser(authUser);
           navigate('/', {replace: true});
-
-
+          resetInputs();
     })
-    resetInputs();
 
 }
 
@@ -67,11 +66,11 @@ const login = () => {
     };
 
 
-    const loginSubmit = (e) => {
-        e.preventDefault();
-        console.log(userData);
-        e.target.id === "login" ? login() : signup();
-    };
+    // const loginSubmit = (e) => {
+    //     e.preventDefault();
+    //     console.log(userData);
+    //     e.target.id === "login" ? login() : signup();
+    // };
       
   //Funció que serveix per buidar el formulari
   const resetInputs = () => {
@@ -84,9 +83,9 @@ const login = () => {
 
   return (
     <CtForm>
-    <Form onSubmit={loginSubmit}>
+    <Form>
       <CtTitlePrincipal> 
-    <TxtPrincipal>FORM</TxtPrincipal>
+    <TxtPrincipal>Please, fill the form</TxtPrincipal>
     </CtTitlePrincipal>
       <CtTxt>Username</CtTxt>
           <Input
@@ -98,16 +97,17 @@ const login = () => {
             placeholder="User username"
           />
         {location === "/signup"&&
-         <><CtTxt>E-mail</CtTxt>
+         <>
+          <CtTxt>E-mail</CtTxt>
           <Input
             onChange={handleInput}
             value={userData.email}
             name="email"
             type="email"
-            aria-label="email"
             placeholder="User email"
             />
             </>}
+
             <CtTxt>Password</CtTxt>
           <Input
             onChange={handleInput}
@@ -119,8 +119,8 @@ const login = () => {
 
             <CtButton> 
             {location === "/login" ?
-              <BtEdit type="submit" id="login" onClick={loginSubmit}>LOGIN</BtEdit>
-              :<BtEdit type="submit" id="registrer" onClick={loginSubmit} >REGISTRER</BtEdit>
+              <BtForm type="button" id="login" onClick={login}>LOG IN</BtForm>
+              :<BtForm type="button" id="signup" onClick={signup} >SIGN UP</BtForm>
             }
             </CtButton>
         </Form>

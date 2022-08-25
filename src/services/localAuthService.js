@@ -3,7 +3,7 @@ export const localAuthService = {
   // funcions autenticació
 
     isAuthor(object) {
-      if (this.getAuthUser().id !== object.author.id) return false;
+      if (this.getAuthUser().id !== object.creator.id) return false;
       return true;
     },
   
@@ -23,12 +23,18 @@ export const localAuthService = {
       localStorage.setItem("auth", JSON.stringify(authUser));
     },
 
-      deleteAuthUser() {
-        localStorage.removeItem("auth")
-        window.location.assign("/")
-      }
-
-  };
-  
 
 
+  deleteAuthUser(confirmation) {
+    if(confirmation){
+      localStorage.removeItem("auth")
+      window.location = ("/");
+  } return;
+}
+
+
+// deleteAuthUser() {
+//   localStorage.removeItem("auth")
+// },
+
+}

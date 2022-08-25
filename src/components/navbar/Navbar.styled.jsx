@@ -118,16 +118,13 @@ export const TxtRegistrate = styled.button`
 `;
 
 export const CtLogoCentral = styled.div`
- display: flex;
- flex-direction: row;
 `;
 
 export const LogoAdventure = styled.img`
-margin-left: 13%;
+  /* margin-right: 0%; */
+  margin-left: 40%;
+
 @media screen and (max-width: 820px) {
-  /* top:-10%;
-  left:5%;
-  position: fixed; */
   margin-top: -25%;
   margin-left: -21%;
   }

@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from "react-router-dom";
+import { localAuthService } from '../../services/localAuthService';
 
 import { 
   CtCard, 
@@ -22,8 +23,6 @@ import {
   User,
   Num,
   CtUserName,
-  Punts,
-  CtPunts,
   NumHeart
 } from './MomentCard.styled';
 
@@ -37,14 +36,11 @@ function MomentCard({moment, deleteMoment, likes, isLiked}) {
     <CtCard>
       <CtUser>
       <User>
-        <UserPhoto src={moment.creator.userImg} alt={moment.creator.userName}></UserPhoto>
+        <UserPhoto src={moment.creator.userImg} alt={moment.creator.username}></UserPhoto>
       </User>
       <CtUserName>
-        <UserName>{moment.creator.userName}</UserName> 
+        <UserName>{moment.creator.username}</UserName> 
       </CtUserName>
-      <CtPunts>
-        <Punts>...</Punts> 
-      </CtPunts>
       </CtUser>
       <CtImage>
       <Link to = {`/moments/${moment.id}`}>
@@ -52,13 +48,14 @@ function MomentCard({moment, deleteMoment, likes, isLiked}) {
           </Link>
       </CtImage>
       <CtCardInfo>
-                  {/* <i className= {moment.like ? "fa-solid fa-heart" : "fa-regular fa-heart"}></i></BtFav> */}
 
         <CtIcons>
 
 
           {moment.liked ? (
             <>
+
+
           <NumHeart>{moment.likesCount}</NumHeart>
           <BtFav onClick={() => likes(moment.id)} isLiked={isLiked}>
           <i className="fa-solid fa-heart"></i></BtFav>
@@ -72,22 +69,24 @@ function MomentCard({moment, deleteMoment, likes, isLiked}) {
           </>
             )}
 
-          <Num>{moment.commentCount}</Num>
 
           <BtComment>
-
           <Anchor href={`/moments/${moment.id}`}><span>
           <i className="fa-regular fa-comment-dots fa-2x fa-lg"></i></span></Anchor></BtComment>
-        </CtIcons>
-        <CtIconsModify>
+          <Num>{moment.commentCount}</Num>
+          </CtIcons>
+          <CtIconsModify>
          
+          {localAuthService.isAuthor(moment) && (
+          <>
          <BtEdit>
          <Anchor href={`/form/${moment.id}`}><span>
          <i className="fa-solid fa-pen-to-square"></i></span></Anchor></BtEdit>
 
           <BtDelete onClick={() => deleteMoment(moment.id)}>
           <i className="fa-solid fa-trash-can"></i></BtDelete>
-
+          </>
+          )}
         </CtIconsModify>
         </CtCardInfo>
         <CtTxt>

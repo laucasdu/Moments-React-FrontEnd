@@ -54,28 +54,23 @@ export const CtImage = styled.div`
   }
 
   @media screen and (max-width: 820px) {
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    top: 29%;
-  }
 
-  @media (max-width: 450px) {
-    width: 100%;
+}
+  @media screen and (max-width: 415px) {
 
   }
+
 `;
 
 export const ImageUrl = styled.img`
   width: 100%;
-  margin-left: 50px;
+  /* margin-left: 50px; */
   border-radius: 0.2vw;
 
+  @media screen and (max-width: 820px) {
+  }
+  @media screen and (max-width: 415px) {
 
-  /* box-shadow: 0 0 8px grey; */
-  @media (max-width: 450px) {
-    width: 100%;
-    height: 100%;
   }
 `;
 

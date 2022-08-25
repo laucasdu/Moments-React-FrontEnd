@@ -18,16 +18,13 @@ export const CtForm = styled.div`
 
 export const Form = styled.form`
   width: 40%;
-  height: 45vh;
+  height: 37vh;
   flex-direction: column;
-  /* border-style: solid; */
   filter: drop-shadow(2px 1px 6px #7a8188 );
-  /* border-color: #1D0B29; */
   padding: 2%;
   border-radius: 0.2vw;
   position: fixed;
   top: 43%;
-
   background-color: white;
 
   @media only screen and (max-width:820px) {
@@ -65,7 +62,7 @@ export const InputDescription = styled.textarea`
   background-color: #D5E0DC;  
   border-radius: 0.2vw;
   width: 100%;
-  padding: 12px 20px;
+  padding: 10px 20px;
   font-weight: 500;
   box-sizing: border-box;
   font-family: 'Courier New', Courier, monospace;
@@ -77,14 +74,13 @@ export const InputDescription = styled.textarea`
   }
 `;
 
-export const BtEdit = styled.button`
+export const BtForm = styled.button`
   color:black;
-  width: 50%;
+  width: 100%;
   height: 40px;
   font-size: small;
   align-items: center;
   margin-top: 20px;
-  margin-right: 10px;
   background-color: #98B5A4;
   border: none;
   font-weight: 800;
@@ -99,15 +95,15 @@ export const BtEdit = styled.button`
 
   @media only screen and (max-width:820px) {
   font-size: 20px;
-  width: 50%;
+  width: 100%;
   font-size: 19px;
 }
 
 
-@media (max-width: 420px) {
+@media screen and (max-width: 420px) {
    
   font-size: 20px;
-  width: 45%;
+  width: 100%;
   font-size: 19px;
 
   }
@@ -140,7 +136,7 @@ export const BtCancel = styled.button`
   font-size: 19px;
 }
 
-  @media (max-width: 420px) {
+  @media screen and (max-width: 420px) {
     font-size: 20px;
     width: 45%;
   font-size: 19px;
