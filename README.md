@@ -33,11 +33,14 @@ Also, it is using react-router-dom v.6 to navigate between pages. The applicatio
 
 ## IU DESIGN
 
+![MOMENT_MACKBOOK_HOME_](https://user-images.githubusercontent.com/102957525/186791526-7e70a85a-c977-416a-9fbd-8cda6228581e.jpg)
+![MOMENT_MACKBOOK_DETALLE](https://user-images.githubusercontent.com/102957525/186791038-efa4d4c3-b933-4bf2-a2c5-327657476d79.jpg)
+![MOMENT_MOCKUP_IPAD_IPHONE](https://user-images.githubusercontent.com/102957525/186791002-dade1675-c58e-47a3-800d-7969107af8ca.jpg)
 
 ## TECHNOLOGIES & TOOLS
 - HTML 5
 - CSS 3
-- JS ES6 VANILLA
+- JavaScript ES6 Vanilla
 - React
 - Axios
 - React router DOM 
