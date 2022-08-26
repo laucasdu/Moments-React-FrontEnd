@@ -39,12 +39,7 @@ function MomentsList() {
 
     const deleteMoment = (id) => {
       let momentDelete = moments.filter((moment) => moment.id === id);
-      let deleteConfirmed = window.confirm(
-        `Delete ${momentDelete[0].title} from the list?`
-      );
-      // if (!deleteConfirmed) return;
-      // let filterMoments = moments.filter((moment) => moment.id !== id);
-      // console.log(filterMoments);
+      window.confirm(`Delete ${momentDelete[0].title} from the list?`);
   
       momentServices.deleteMoment(parseInt(id)).then((res) => {
         if(res)
@@ -105,7 +100,7 @@ function MomentsList() {
           search={search}
           /> 
           <CtMomentList>
-          {moments.map((moment, key)=> (
+          {moments.reverse().map((moment, key)=> (
               <MomentCard 
               key={key} 
               likes={likes} 
